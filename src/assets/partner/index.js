@@ -1,0 +1,16 @@
+export { default as partner01Image } from "./partner01.jpg";
+export { default as partner02Image } from "./partner02.jpg";
+export { default as partner03Image } from "./partner03.jpg";
+export { default as partner04Image } from "./partner04.jpg";
+export { default as partner05Image } from "./partner05.jpg";
+export { default as partner06Image } from "./partner06.jpg";
+export { default as partner07Image } from "./partner07.jpg";
+export { default as partner08Image } from "./partner08.jpg";
+export { default as partner09Image } from "./partner09.jpg";
+export { default as partner10Image } from "./partner10.jpg";
+export { default as partner11Image } from "./partner11.jpg";
+export { default as partner12Image } from "./partner12.jpg";
+export { default as partner13Image } from "./partner13.jpg";
+export { default as partner14Image } from "./partner14.jpg";
+export { default as partner15Image } from "./partner15.jpg";
+export { default as partner16Image } from "./partner16.jpg";

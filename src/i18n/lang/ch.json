@@ -1,0 +1,614 @@
+{
+  "common": {
+    "signUp": "중국어 sign up",
+    "signIn": "중국어 sign in",
+    "logout": "중국어 logout",
+    "buyer": "중국어 buyer",
+    "supplier": "중국어 supplier"
+  },
+  "category": {
+    "Box": "중국어 Box",
+    "Pouch": "중국어 Pouch"
+  },
+  "subCategory": {
+    "Folding carton": "중국어 Folding carton",
+    "Mailer boxes": "중국어 Mailer boxes",
+    "Sleeve": "중국어 Sleeve",
+    "Tray": "중국어 Tray",
+    "Rigid boxes": "중국어 Rigid boxes",
+    "Stick pouch": "중국어 Stick pouch",
+    "Flat pouch": "중국어 Flat pouch",
+    "Stand-up pouch": "중국어 Stand-up pouch",
+    "Flat Bottom pouch": "중국어 Flat Bottom pouch",
+    "Spouted pouch": "중국어 Spouted pouch"
+  },
+  "style": {
+    "Reverse Tuck End": "중국어 Reverse Tuck End",
+    "Straight Tuck End": "중국어 Straight Tuck End",
+    "Auto Bottom": "중국어 Auto Bottom",
+    "Snap Lock": "중국어 Snap Lock",
+    "Without lid": "중국어 Without lid",
+    "With lid": "중국어 With lid",
+    "Standard Cover": "중국어 Standard Cover",
+    "Shoulder and Neck": "중국어 Shoulder and Neck"
+  },
+  "spec": {
+    "sizeUnit": {
+      "inches": "중국어 inches",
+      "cm": "중국어 cm",
+      "mm": "중국어 mm"
+    },
+    "sizeSpec": {
+      "Width": "중국어 Width",
+      "Length": "중국어 Length",
+      "Height": "중국어 Height",
+      "Bottom": "중국어 Bottom",
+      "Top Width": "중국어 Top Width",
+      "Top Length": "중국어 Top Length",
+      "Bottom Width": "중국어 Bottom Width",
+      "Bottom Length": "중국어 Bottom Length",
+      "Bottom Height": "중국어 Bottom Height",
+      "Upper Height": "중국어 Upper Height",
+      "Neck Height": "중국어 Neck Height",
+      "Roll Width": "중국어 Roll Width",
+      "Roll Length": "중국어 Roll Length",
+      "Spout diameter": "중국어 Spout diameter"
+    },
+    "guide": {
+      "materialSc": "중국어 White on the front, gray on the back, single-sided printing available, affordable",
+      "materialIv": "중국어 Double-sided white, higher strength than SC and excellent printability",
+      "materialRiv": "중국어 Double-sided white, elasticity, durability, excellent printability, high-quality paper",
+      "materialCcp": "중국어 Double-sided white, transparent gloss, smooth and resilient, excellent printability, high-quality paper",
+      "materialFbbAllKing": "중국어 Used as Riv replacement, High Bulk Board, with a thickness of about 20% higher than that of RIV",
+      "wrappingGlossCoatedPaper": "중국어 Glossy surface, suitable for vivid color printing",
+      "wrappingMatteCoatedPaper": "중국어 Matte surface, suitable for fine print",
+      "materialPetLldpe": "중국어 Commonly Used Transparent Pouches",
+      "materialPetAlLldpe": "중국어 Excellent protection against oxygen, moisture and light (Powders, etc.)",
+      "materialPetAlNyLldpe": "중국어 Excellent adhesion and impact strength to prevent leakage of liquid (Beverage, etc.)",
+      "materialPetAlNyCpp": "중국어 High temperature sterilization, blocking oxygen and humidity, excellent heat resistance and durability (Food, etc.)",
+      "materialPetAlNyCpr": "중국어 High temperature sterilization, blocking oxygen and humidity, excellent heat resistance and durability (Retort, etc.)",
+      "materialPetNyLldpe": "중국어 Excellent cold resistance, impact resistance, printability (Chilled and Frozen Foods, etc.)",
+      "materialPetVmpetLldpe": "중국어 Can block oxygen/moisture/light for a short time (Confectionery, etc.)",
+      "materialKraftVmpetLldpe": "중국어 Can block oxygen/moisture/light for a short time (Coffee beans, etc.)",
+      "materialNyLldpe": "중국어 Excellent cold resistance, impact resistance (Chilled and Frozen Foods, etc.)",
+      "materialOppCpp": "중국어 Use high transparency film (Dried food, ice cream, etc.)"
+    },
+    "grammage": {
+      "270g": "중국어 270g",
+      "295g": "중국어 295g",
+      "300g": "중국어 300g",
+      "325g": "중국어 325g",
+      "350g": "중국어 350g",
+      "400g": "중국어 400g"
+    },
+    "material": {
+      "sc": "중국어 SC",
+      "iv": "중국어 IV",
+      "riv": "중국어 RIV",
+      "ccp": "중국어 CCP",
+      "fbbAllKing": "중국어 FBB-Aliking",
+      "petLldpe": "중국어 PET + LLDPE",
+      "petAlLldpe": "중국어 PET + AL + LLDPE",
+      "petAlNyLldpe": "중국어 PET + AL + NY + LLDPE",
+      "petAlNyCpp": "중국어 PET + AL + NY + CPP",
+      "petAlNyCpr": "중국어 PET + AL + NY + CPR",
+      "petNyLldpe": "중국어 PET + NY + LLDPE",
+      "petVmpetLldpe": "중국어 PET + VMPET + LLDPE",
+      "kraftVmpetLldpe": "중국어 Kraft + VMPET + LLDPE",
+      "nyLldpe": "중국어 NY + LLDPE",
+      "oppCpp": "중국어 OPP + CPP",
+      "enterASpecificMaterial": "중국어 Enter a specific material"
+    },
+    "chipBoard": {
+      "white1000g": "중국어 White(1000g)",
+      "white1200g": "중국어 White(1200g)",
+      "black1000g": "중국어 Black(1000g)",
+      "black1200g": "중국어 Black(1200g)"
+    },
+    "wrappingPaper": {
+      "GlossCoatedPaper": "중국어 Gloss coated paper",
+      "MatteCoatedPaper": "중국어 Matte coated paper"
+    },
+    "printColor": {
+      "color": "중국어 color",
+      "colors": "중국어 colors"
+    },
+    "coating": {
+      "varnish": "중국어 Varnish",
+      "lamination": "중국어 Lamination"
+    },
+    "finish": {
+      "matte": "중국어 Matte",
+      "glossy": "중국어 Glossy",
+      "satin": "중국어 Satin",
+      "softTouch": "중국어 Soft touch"
+    },
+    "extras": {
+      "spotUv": "중국어 Spot Uv",
+      "embossing": "중국어 Embossing",
+      "debossing": "중국어 Debossing",
+      "foilStamping": "중국어 Foil stamping"
+    },
+    "printSurface": {
+      "fullMatte": "중국어 Full matte",
+      "partialMatte": "중국어 Partial matte",
+      "fullGloss": "중국어 Full gloss"
+    },
+    "easyCut": {
+      "yes": "중국어 Yes",
+      "no": "중국어 No"
+    },
+    "zipper": {
+      "none": "중국어 None",
+      "normalZipper": "중국어 Normal zipper",
+      "pocketZipper": "중국어 Pocket zipper",
+      "doubleZipper": "중국어 Double zipper",
+      "sliceZipper": "중국어 Slice zipper"
+    }
+  },
+  "main": {
+    "Sentence1": "중국어 Innovative packaging manufacturing platform",
+    "Sentence2": "중국어 for collaboration between Buyers and Suppliers",
+    "Collaboration": "중국어 More than 500 buyers and Supplier that Packposs has collaborated with",
+    "BuyerIntroTitle": "중국어 Start a new project with the world's leading manufacturer.",
+    "BuyerIntroDesc1": "중국어 You can compare the prices of different manufacturers",
+    "BuyerIntroDesc2": "중국어 and make the custom packaging reasonably.",
+    "SupplierIntroTitle": "중국어 Expand your business world wide with Packposs.",
+    "SupplierIntroDesc1": "중국어 You can compare the prices of different manufacturers",
+    "SupplierIntroDesc2": "중국어 and make the custom packaging reasonably.",
+    "SupplierAdvantageTitle1": "중국어 Compare Free Quotes",
+    "SupplierAdvantageDesc1-1": "중국어 We delivers quick turn-around for all",
+    "SupplierAdvantageDesc1-2": "중국어 custom packaging needs from",
+    "SupplierAdvantageDesc1-3": "중국어 design to shipment",
+    "SupplierAdvantageTitle2": "중국어 Quick Turn-Around",
+    "SupplierAdvantageDesc2-1": "중국어 We delivers quick turn-around for all",
+    "SupplierAdvantageDesc2-2": "중국어 custom packaging needs from",
+    "SupplierAdvantageDesc2-3": "중국어 design to shipment",
+    "SupplierAdvantageTitle3": "중국어 High-Quality",
+    "SupplierAdvantageDesc3-1": "중국어 We offer High-Quality packaging",
+    "SupplierAdvantageDesc3-2": "중국어 with verified suppliers and experts.",
+    "SupplierAdvantageTitle4": "중국어 Global Shipping",
+    "SupplierAdvantageDesc4-1": "중국어 The products can be shipped",
+    "SupplierAdvantageDesc4-2": "중국어 anywhere in the world with door to",
+    "SupplierAdvantageDesc4-3": "중국어 door service.",
+    "ProcessOrderListTitle1": "중국어 Create a item",
+    "ProcessOrderListDesc1-1": "중국어 Consider the various categories and specifications",
+    "ProcessOrderListDesc1-2": "중국어 and build up with your own custom packaging.",
+    "ProcessOrderListTitle2": "중국어 Request quote",
+    "ProcessOrderListDesc2-1": "중국어 Select an item with sufficient specifications and",
+    "ProcessOrderListDesc2-2": "중국어 request a quote with quantity, delivery.",
+    "ProcessOrderListTitle3": "중국어 Request quote",
+    "ProcessOrderListDesc3-1": "중국어 Select an item with sufficient specifications and",
+    "ProcessOrderListDesc3-2": "중국어 request a quote with quantity, delivery.",
+    "ProcessOrderListTitle4": "중국어 Submit order",
+    "ProcessOrderListDesc4-1": "중국어 Take opportunities of new and diverse project",
+    "ProcessOrderListDesc4-2": "중국어 by registering for a quote.",
+    "customizedSlideListTitle1": "중국어 Customized Folding carton box",
+    "customizedSlideListDesc1-1": "중국어 Compare quotes from different manufacturers",
+    "customizedSlideListDesc1-2": "중국어 and start the project with a matched partner.",
+    "customizedSlideListTitle2": "중국어 Customized Folding carton box",
+    "customizedSlideListDesc2-1": "중국어 Compare quotes from different manufacturers",
+    "customizedSlideListDesc2-2": "중국어 and start the project with a matched partner."
+  },
+  "header": {
+    "opportunities": "중국어 Opportunities",
+    "quotes": "중국어 Quotes",
+    "myTransaction": "중국어 My Transaction"
+  },
+  "sideMenu": {
+    "managingOrders": "중국어 Managing orders",
+    "main": "중국어 main",
+    "create": "중국어 create",
+    "items": "중국어 items",
+    "new": "중국어 new",
+    "open": "중국어 open",
+    "all": "중국어 all",
+    "inProgress": "중국어 In progress",
+    "submitted": "중국어 submitted",
+    "ordered": "중국어 ordered",
+    "declined": "중국어 declined",
+    "unSubmitted": "중국어 Un submitted"
+  },
+  "supplierPhrase": {
+    "getStarted": "중국어 Get Started",
+    "requestOn": "중국어 Request on",
+    "requestId": "중국어 Request Id",
+    "shipping": "중국어 Shipping",
+    "expiration": "중국어 Expiration",
+    "nickname": "중국어 Nickname",
+    "maxQuantityUnits": "중국어 Max quantity units",
+    "item": "중국어 item",
+    "viewDetails": "중국어 View details",
+    "itemId": "중국어 item ID",
+    "category": "중국어 Category",
+    "specifications": "중국어 Specifications",
+    "quote": "중국어 Quote",
+    "price": "중국어 Price",
+    "style": "중국어 Style",
+    "size": "중국어 Size",
+    "material": "중국어 Material",
+    "colors": "중국어 Colors",
+    "coating": "중국어 Coating",
+    "finish": "중국어 Finish",
+    "comments": "중국어 Comments",
+    "whatDoYouPack": "중국어 what do you pack",
+    "requestOverview": "중국어 Request overview",
+    "submitRequest": "중국어 Submit request",
+    "submitRequestWarningDesc": "중국어 There are 3 items that have not been quoted.",
+    "pricing": "중국어 Pricing",
+    "quantity": "중국어 Quantity",
+    "unitPrice": "중국어 Unit price",
+    "total": "중국어 Total",
+    "tooling": "중국어 Tooling",
+    "type": "중국어 Type",
+    "cost": "중국어 Cost",
+    "notes": "중국어 Notes",
+    "wouldYouLikeYoProceed": "중국어 Would you like to proceed?",
+    "cancel": "중국어 cancel",
+    "ok": "중국어 ok"
+  },
+  "searchFilter": {
+    "search": "중국어 search"
+  },
+  "managingOrder": {
+    "manageYourOrder": "중국어 manage your order",
+    "step1": "중국어 step 1",
+    "step2": "중국어 step 2",
+    "step3": "중국어 step 3",
+    "step4": "중국어 step 4",
+    "step1Text": "중국어 Create new item",
+    "step2Text": "중국어 Request quotes",
+    "step3Text": "중국어 Review your request from manager",
+    "step4Text": "중국어 Get quotes and Place an order",
+    "create": "중국어 create"
+  },
+  "managingPackagingCreate": {
+    "step1TitleText": "중국어 Select a Category",
+    "step2TitleText": "중국어 Select a SubCategory",
+    "step3TitleText": "중국어 Select a style",
+    "step4TitleText": "중국어 Specification",
+    "step1": "중국어 step 1",
+    "step2": "중국어 step 2",
+    "step3": "중국어 step 3",
+    "step4": "중국어 step 4",
+    "step1Text": "중국어 Category",
+    "step2Text": "중국어 Sub Category",
+    "step3Text": "중국어 Style",
+    "step4Text": "중국어 Specification",
+    "size": "중국어 size",
+    "material": "중국어 material",
+    "wrapping paper": "중국어 wrapping paper",
+    "print color": "중국어 print color",
+    "coating": "중국어 coating",
+    "finish": "중국어 finish",
+    "extras": "중국어 extras",
+    "print surface": "중국어 print surface",
+    "easy cut": "중국어 easy cut",
+    "zipper": "중국어 zipper",
+    "duplicate selection available": "중국어 duplicate selection available",
+    "notes": "중국어 notes",
+    "documents": "중국어 documents",
+    "what do you pack?": "중국어 what do you pack?",
+    "nickname": "중국어 nickname"
+  },
+  "packagingList": {
+    "items": "중국어 items",
+    "request Quotes": "중국어 request Quotes",
+    "view details": "중국어 view details",
+    "category": "중국어 category",
+    "subCategory": "중국어 sub category",
+    "style": "중국어 style",
+    "size": "중국어 size",
+    "nickname": "중국어 nickname"
+  },
+  "specificationContent": {
+    "itemID": "중국어 item ID",
+    "category": "중국어 category",
+    "subCategory": "중국어 sub Category",
+    "sizeUnit": "중국어 sizeUnit",
+    "sizeSpec": "중국어 sizeSpec",
+    "grammage": "중국어 grammage",
+    "material": "중국어 material",
+    "chipBoard": "중국어 chipBoard",
+    "wrappingPaper": "중국어 wrappingPaper",
+    "printColor": "중국어 printColor",
+    "coating": "중국어 coating",
+    "finish": "중국어 finish",
+    "extras": "중국어 extras",
+    "printSurface": "중국어 printSurface",
+    "easyCut": "중국어 easyCut",
+    "zipper": "중국어 zipper",
+    "comments": "중국어 comments",
+    "whatDoYouPack": "중국어 what do you pack",
+    "nickName": "중국어 nickName",
+    "documents": "중국어 documents",
+    "toast": {
+      "errorRequiredPrefix": "중국어 is required.",
+      "errorToast1": "중국어 One or more documents is required."
+    }
+  },
+  "detailSpecification": {
+    "specification": "중국어 specification",
+    "edit": "중국어 edit",
+    "delete": "중국어 delete"
+  },
+  "editSpecification": {
+    "editSpecification": "중국어 Edit specification",
+    "cancel": "중국어 cancel",
+    "update": "중국어 update"
+  },
+  "inProgress": {
+    "inProgress": "중국어 in progress",
+    "item": "중국어 item",
+    "nickName": "중국어 nickName",
+    "category": "중국어 category",
+    "requested": "중국어 requested",
+    "quotes": "중국어 quotes",
+    "viewDetails": "중국어 View details"
+  },
+  "status": {
+    "quote": {
+      "quoting": "중국어 quoting",
+      "submitted": "중국어 submitted",
+      "ordered": "중국어 ordered",
+      "declined": "중국어 declined",
+      "unSubmitted": "중국어 un submitted"
+    },
+    "rfq": {
+      "quoting": "중국어 quoting",
+      "readyToOrder": "중국어 ready to order",
+      "ordered": "중국어 ordered",
+      "declined": "중국어 declined"
+    }
+  },
+  "packagingRequest": {
+    "requestForQuotes": "중국어 Request for quotes",
+    "addressText": "중국어 Please enter the correct delivery address.",
+    "address": "중국어 address",
+    "backToList": "중국어 Back To List",
+    "submitRequest": "중국어 submit Request",
+    "estimate": "중국어 estimate",
+    "modalTitle": "중국어 item Request",
+    "modalDesc": "중국어 Do you want to proceed with the item estimate request? Once you proceed with the request, you cannot modify it.",
+    "modalOkText": "중국어 request",
+    "modalCAncelText": "중국어 cancel",
+    "errorToast1": "중국어 You need to fill out at least one quantity for each item.",
+    "errorToast2": "중국어 Please enter the correct address to receive the delivery.",
+    "errorToast3": "중국어 Please select it from the packaging item list and try again.  After 2 seconds, it automatically moves to the list page."
+  },
+  "packagingInProgress": {
+    "quote": "중국어 quote",
+    "submitted": "중국어 submitted",
+    "subTotal": "중국어 sub Total",
+    "submitOrder": "중국어 submit order",
+    "nickname": "중국어 nickname",
+    "category": "중국어 category",
+    "style": "중국어 style",
+    "quantities": "중국어 quantities",
+    "unitPrice": "중국어 unit price",
+    "tooling": "중국어 tooling",
+    "total": "중국어 total",
+    "viewDetail": "중국어 View Detail",
+    "toast": {
+      "infoToast1": "중국어 You can only select from the Ready to order step."
+    }
+  },
+  "signIn": {
+    "signInTitle": "중국어 sign in",
+    "signInDesc": "중국어 sign in to your Packaging poss account.",
+    "email": "중국어 email",
+    "password": "중국어 password",
+    "signIn": "중국어 sign in",
+    "signUpDesc": "중국어 Don't you have an account?",
+    "forgetPasswordDesc": "중국어 Forgot your password?",
+    "toast": {
+      "successToast1": "중국어 sign up success",
+      "successToast2": "중국어 password change success!"
+    }
+  },
+  "signUp": {
+    "signUpTypeTitle": "중국어 create your account type",
+    "signUpTypeBuyerType": "중국어 buyer Type",
+    "signUpTypeBuyerDesc": "중국어 Purchase from suppliers",
+    "signUpTypeSupplierType": "중국어 Supplier Type",
+    "signUpTypeSupplierDesc": "중국어 Produce and support customers",
+
+    "signUpFormTitle": "중국어 create a new account",
+    "signUpFormDesc": "중국어 already have an account?",
+    "email": "중국어 email",
+    "send": "중국어 send",
+    "verificationCode": "중국어 verification code",
+    "verificationDesc": "중국어 (6 digit)",
+    "confirm": "중국어 confirm",
+    "password": "중국어 password",
+    "passwordError": "중국어 At least 1 number, at least 1 special character, at least 6-16 lengths",
+    "confirmPassword": "중국어 confirm password",
+    "confirmPasswordError": "중국어 Passwords do not match.",
+    "fullName": "중국어 full name",
+    "companyName": "중국어 company name",
+    "country": "중국어 country",
+    "getStarted": "중국어 get started",
+    "toast": {
+      "errorToast1": "중국어 Email format is incorrect.",
+      "errorToast2": "중국어 mail verify code failure",
+      "errorToast3": "중국어 email check please",
+      "errorToast4": "중국어 verify code check please",
+      "errorToast5": "중국어 password check please",
+      "errorToast6": "중국어 full name check please",
+      "errorToast7": "중국어 country check please",
+      "errorToast8": "중국어 company name check please",
+      "warningToast1": "중국어 Please send the email again to proceed.",
+      "successToast1": "중국어 mail verify code success"
+    }
+  },
+  "passwordReset": {
+    "step1Title": "중국어 forgot your password?",
+    "step1Desc": "중국어 enter the email associated with your account. We'll send you a temporary password.",
+    "step2Title": "중국어 register a new password",
+    "signInMoveText1": "중국어 return to login page",
+    "email": "중국어 email",
+    "verifyEmail": "중국어 verify email",
+    "passwordErrorText": "중국어 please provide a valid email address.",
+    "verificationCodeSendText": "중국어 we sent the verification code to your email",
+    "verificationCodeLabelText": "중국어 enter your Verification code",
+    "verificationCode": "중국어 verification code",
+    "verify": "중국어 verify",
+
+    "password": "중국어 password",
+    "confirmPassword": "중국어 confirm password",
+    "RegisterPassword": "중국어 Register a new password",
+
+    "toast": {
+      "infoToast1": "중국어 This email is already in use.",
+      "errorToast1": "중국어 Email format is incorrect.",
+      "errorToast2": "중국어 mail verify code failure",
+      "warningToast1": "중국어 Please send the email again to proceed.",
+      "successToast1": "중국어 mail verify code success",
+
+      "errorToast3": "중국어 Wrong approach.",
+      "errorToast4": "중국어 At least 1 number, at least 1 special character, at least 6-16 lengths",
+      "errorToast5": "중국어 Passwords do not match."
+    }
+  },
+  "myAccount": {
+    "myAccount": "중국어 my account",
+    "confirmPassword": "중국어 confirm password",
+    "password": "중국어 password",
+    "submit": "중국어 submit",
+
+    "emailChangeChoiceModalTitle": "중국어 change Email",
+    "emailChangeChoiceModalOkText": "중국어 change",
+    "emailChangeChoiceModalCancelText": "중국어 cancel",
+
+    "accountInfo": "중국어 account info",
+
+    "email": "중국어 email",
+    "edit": "중국어 edit",
+    "name": "중국어 name",
+    "companyName": "중국어 company Name",
+    "country": "중국어 country",
+    "save": "중국어 save",
+
+    "changeYourPassword": "중국어 change your password",
+    "currentPassword": "중국어 current Password",
+    "newPassword": "중국어 new Password",
+    "confirmNewPassword": "중국어 confirm new password",
+
+    "deleteAccountChoiceModalTitle": "중국어 delete your account",
+    "deleteAccountChoiceModalOkText": "중국어 delete",
+    "deleteAccountChoiceModalCancelText": "중국어 cancel",
+
+    "deleteAccountChoiceModalDesc1": "중국어 If you request for deletion, you cannot log in, and all data will be deleted within 7 days by the administrator.",
+    "deleteAccountChoiceModalDesc2": "중국어 Do you want to proceed?",
+
+    "dangerZone": "중국어 danger zone",
+    "deleteAccount": "중국어 delete account",
+    "deleteAccountDesc": "중국어 Delete all your account information. You cannot revert deleted accounts.",
+    "deleteYourAccount": "중국어 Delete your account",
+
+    "toast": {
+      "errorToast1": "중국어 please write down the required values.",
+      "errorToast2": "중국어 please follow the email change procedure.",
+      "successToast1": "중국어 the email has been changed.",
+
+      "errorToast3": "중국어 the new password does not match."
+    }
+  },
+  "opportunities": {
+    "opportunities": "중국어 opportunities",
+    "requestedOn": "중국어 requested on",
+    "requestId": "중국어 requested ID",
+    "nickname": "중국어 nickname",
+    "maxQuantityUnits": "중국어 Max quantity units",
+    "item": "중국어 item",
+    "viewDetails": "중국어 view details"
+  },
+  "noItem": {
+    "noItem": "중국어 no data"
+  },
+  "pagination": {
+    "showing": "중국어 showing",
+    "results": "중국어 results"
+  },
+  "quoteRegister": {
+    "quoteRegisterChoiceModalTitle": "중국어 quote Request",
+    "quoteRegisterChoiceModalDesc": "중국어 are you sure you want to submit an estimate? Modification is not possible when submitting an estimate.",
+    "quoteRegisterChoiceModalOkText": "중국어 submit Request",
+    "quoteRegisterChoiceModalCancelText": "중국어 CANCEL",
+
+    "requestedOn": "중국어 requested on",
+    "requestId": "중국어 requested ID",
+    "shipping": "중국어 shipping",
+    "expiration": "중국어 expiration",
+
+    "nickname": "중국어 nickname",
+    "category": "중국어 category",
+    "style": "중국어 style",
+
+    "quantities": "중국어 quantities",
+    "price": "중국어 price",
+
+    "specifications": "중국어 specifications",
+    "quote": "중국어 quote",
+    "pricing": "중국어 pricing",
+    "tooling": "중국어 tooling",
+    "default": "중국어 default",
+    "secondary": "중국어 secondary",
+    "quantity": "중국어 quantity",
+    "unitPrice": "중국어 unit price",
+    "total": "중국어 total",
+
+    "type": "중국어 type",
+    "cost": "중국어 cost",
+
+    "notes": "중국어 notes",
+    "save": "중국어 save",
+
+    "submitRequest": "중국어 submit request"
+  },
+  "quoteView": {
+    "quote": "중국어 quote",
+    "requestedOn": "중국어 requested on",
+    "shipping": "중국어 shipping",
+    "expiration": "중국어 expiration",
+    "submitted": "중국어 submitted"
+  },
+  "saga": {
+    "signIn": {
+      "deletedUser": "중국어 Unable to log in due to withdrawal application.",
+      "retCode1001": "중국어 ID or password error"
+    },
+    "verifyCodeSend": {
+      "sendEmail": "중국어 The verification code has been sent to that email!"
+    },
+    "updateUserPwd": {
+      "updatePwdSuccess": "중국어 The password has been changed to a new one."
+    },
+    "requestAccountDeletion": {
+      "deletionSuccess": "중국어 Your request for withdrawal has been completed."
+    },
+    "myAccountAccessCheck": {
+      "notMatch": "중국어 Password does not match."
+    },
+    "awsFileUploadInfo": {
+      "fileUploadError": "중국어 An error occurred while uploading the file."
+    },
+    "updatePackagingItem": {
+      "updateSuccess": "중국어 Update success!"
+    }
+  },
+  "commonReturnCode": {
+    "retCode1": "중국어 ERROR CODE 1",
+    "retCode2": "중국어 ERROR CODE 2",
+    "retCode3": "중국어 ERROR CODE 3",
+    "retCode4": "중국어 ERROR CODE 4",
+    "retCode9": "중국어 Not allowed",
+    "retCode999": "중국어 ERROR CODE 999",
+    "retCode1001": "중국어 Login Failed"
+  },
+  "footer": {
+    "companyIntroduction": "중국어 Company introduction",
+    "termsOfService": "중국어 Terms of Service",
+    "privacyPolicy": "중국어 Privacy Policy"
+  }
+}

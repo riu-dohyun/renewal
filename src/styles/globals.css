@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('keen-slider/keen-slider.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s;
+}
+
+.keen-slider__slide { transition: all 0s !important; }
+@layer base {
+    h1, h2, h3, h4, h5{
+        @apply font-bold;
+    }
+}
+@layer components {
+    /* tab menu */
+    .tab_item.active a{
+        @apply text-secondary-500 after:absolute after:bottom-0 after:left-0 after:w-full after:border-b-2 after:border-secondary-500;
+    }
+    .tab_inner{
+        @apply hidden;
+    }
+    .tab_inner.active {
+        @apply block;
+    }
+    /* end tab menu */
+
+    /* accordion */
+    .accordion.active{
+        @apply shadow-lg border-gray-400;
+    }
+    .accordion.active .accordion-icon{
+        @apply rotate-180;
+    }
+    /* end accordion */
+
+    /* dropdown */
+    .dropdown_filter{
+        @apply inline-flex items-center rounded-full p-2;
+    }
+    .dropdown_filter.active{
+        @apply bg-slate-100;
+    }
+    .dropdown_container{
+        @apply absolute right-0 z-10 mt-2 hidden w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none;
+    }
+    .dropdown_container.active{
+        @apply block;
+    }
+
+    .dropdown-focus .dropdown-menu{
+        @apply block;
+    }
+    .dropdown-focus .dropdown-control{
+        @apply text-gray-900;
+    }
+    /* end dropdown */
+    
+    /* input styling */
+    .form-input, .form-textarea{
+        @apply w-full rounded-sm shadow-sm border-gray-300 focus:border-indigo-300 focus:ring-indigo-200 focus:ring-opacity-50 text-sm placeholder:text-slate-300 placeholder:font-normal placeholder:italic transition px-2 py-1.5;
+    }
+    .form-input.disabled{
+        @apply disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none
+    }
+    /* end input styling */
+
+}
+
+
+
+html,body{
+    height: 100%;
+
+}

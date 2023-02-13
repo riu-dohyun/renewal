@@ -1,0 +1,10 @@
+export { default as SubCategory_0_0 } from "src/assets/subCategory/Subcategory_0.0.jpg";
+export { default as SubCategory_0_1 } from "src/assets/subCategory/Subcategory_0.1.jpg";
+export { default as SubCategory_0_2 } from "src/assets/subCategory/Subcategory_0.2.jpg";
+export { default as SubCategory_0_3 } from "src/assets/subCategory/Subcategory_0.3.jpg";
+export { default as SubCategory_0_4 } from "src/assets/subCategory/Subcategory_0.4.jpg";
+export { default as SubCategory_1_0 } from "src/assets/subCategory/Subcategory_1.0.png";
+export { default as SubCategory_1_1 } from "src/assets/subCategory/Subcategory_1.1.png";
+export { default as SubCategory_1_2 } from "src/assets/subCategory/Subcategory_1.2.png";
+export { default as SubCategory_1_3 } from "src/assets/subCategory/Subcategory_1.3.png";
+export { default as SubCategory_1_4 } from "src/assets/subCategory/Subcategory_1.4.jpg";

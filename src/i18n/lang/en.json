@@ -1,0 +1,631 @@
+{
+  "common": {
+    "signUp": "sign up",
+    "signIn": "sign in",
+    "logout": "logout",
+    "buyer": "buyer",
+    "supplier": "supplier"
+  },
+  "category": {
+    "Box": "Box",
+    "Pouch": "Pouch"
+  },
+  "subCategory": {
+    "Folding carton": "Folding carton",
+    "Mailer boxes": "Mailer boxes",
+    "Sleeve": "Sleeve",
+    "Tray": "Tray",
+    "Rigid boxes": "Rigid boxes",
+    "Stick pouch": "Stick pouch",
+    "Flat pouch": "Flat pouch",
+    "Stand-up pouch": "Stand-up pouch",
+    "Flat Bottom pouch": "Flat Bottom pouch",
+    "Spouted pouch": "Spouted pouch"
+  },
+  "style": {
+    "Reverse Tuck End": "Reverse Tuck End",
+    "Straight Tuck End": "Straight Tuck End",
+    "Auto Bottom": "Auto Bottom",
+    "Snap Lock": "Snap Lock",
+    "Without lid": "Without lid",
+    "With lid": "With lid",
+    "Standard Cover": "Standard Cover",
+    "Shoulder and Neck": "Shoulder and Neck"
+  },
+  "spec": {
+    "sizeUnit": {
+      "inches": "inches",
+      "cm": "cm",
+      "mm": "mm"
+    },
+    "sizeSpec": {
+      "Width": "Width",
+      "Length": "Length",
+      "Height": "Height",
+      "Bottom": "Bottom",
+      "Top Width": "Top Width",
+      "Top Length": "Top Length",
+      "Bottom Width": "Bottom Width",
+      "Bottom Length": "Bottom Length",
+      "Bottom Height": "Bottom Height",
+      "Upper Height": "Upper Height",
+      "Neck Height": "Neck Height",
+      "Roll Width": "Roll Width",
+      "Roll Length": "Roll Length",
+      "Spout diameter": "Spout diameter"
+    },
+    "guide": {
+      "materialSc": "White on the front, gray on the back, single-sided printing available, affordable",
+      "materialIv": "Double-sided white, higher strength than SC and excellent printability",
+      "materialRiv": "Double-sided white, elasticity, durability, excellent printability, high-quality paper",
+      "materialCcp": "Double-sided white, transparent gloss, smooth and resilient, excellent printability, high-quality paper",
+      "materialFbbAllKing": "Used as Riv replacement, High Bulk Board, with a thickness of about 20% higher than that of RIV",
+      "wrappingGlossCoatedPaper": "Glossy surface, suitable for vivid color printing",
+      "wrappingMatteCoatedPaper": "Matte surface, suitable for fine print",
+      "materialPetLldpe": "Commonly Used Transparent Pouches",
+      "materialPetAlLldpe": "Excellent protection against oxygen, moisture and light (Powders, etc.)",
+      "materialPetAlNyLldpe": "Excellent adhesion and impact strength to prevent leakage of liquid (Beverage, etc.)",
+      "materialPetAlNyCpp": "High temperature sterilization, blocking oxygen and humidity, excellent heat resistance and durability (Food, etc.)",
+      "materialPetAlNyCpr": "High temperature sterilization, blocking oxygen and humidity, excellent heat resistance and durability (Retort, etc.)",
+      "materialPetNyLldpe": "Excellent cold resistance, impact resistance, printability (Chilled and Frozen Foods, etc.)",
+      "materialPetVmpetLldpe": "Can block oxygen/moisture/light for a short time (Confectionery, etc.)",
+      "materialKraftVmpetLldpe": "Can block oxygen/moisture/light for a short time (Coffee beans, etc.)",
+      "materialNyLldpe": "Excellent cold resistance, impact resistance (Chilled and Frozen Foods, etc.)",
+      "materialOppCpp": "Use high transparency film (Dried food, ice cream, etc.)"
+    },
+    "grammage": {
+      "270g": "270g",
+      "295g": "295g",
+      "300g": "300g",
+      "325g": "325g",
+      "350g": "350g",
+      "400g": "400g"
+    },
+    "material": {
+      "sc": "SC",
+      "iv": "IV",
+      "riv": "RIV",
+      "ccp": "CCP",
+      "fbbAllKing": "FBB-Aliking",
+      "petLldpe": "PET + LLDPE",
+      "petAlLldpe": "PET + AL + LLDPE",
+      "petAlNyLldpe": "PET + AL + NY + LLDPE",
+      "petAlNyCpp": "PET + AL + NY + CPP",
+      "petAlNyCpr": "PET + AL + NY + CPR",
+      "petNyLldpe": "PET + NY + LLDPE",
+      "petVmpetLldpe": "PET + VMPET + LLDPE",
+      "kraftVmpetLldpe": "Kraft + VMPET + LLDPE",
+      "nyLldpe": "NY + LLDPE",
+      "oppCpp": "OPP + CPP",
+      "enterASpecificMaterial": "Enter a specific material"
+    },
+    "chipBoard": {
+      "white1000g": "White(1000g)",
+      "white1200g": "White(1200g)",
+      "black1000g": "Black(1000g)",
+      "black1200g": "Black(1200g)"
+    },
+    "wrappingPaper": {
+      "GlossCoatedPaper": "Gloss coated paper",
+      "MatteCoatedPaper": "Matte coated paper"
+    },
+    "printColor": {
+      "color": "color",
+      "colors": "colors"
+    },
+    "coating": {
+      "varnish": "Varnish",
+      "lamination": "Lamination"
+    },
+    "finish": {
+      "matte": "Matte",
+      "glossy": "Glossy",
+      "satin": "Satin",
+      "softTouch": "Soft touch"
+    },
+    "extras": {
+      "spotUv": "Spot Uv",
+      "embossing": "Embossing",
+      "debossing": "Debossing",
+      "foilStamping": "Foil stamping"
+    },
+    "printSurface": {
+      "fullMatte": "Full matte",
+      "partialMatte": "Partial matte",
+      "fullGloss": "Full gloss"
+    },
+    "easyCut": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "zipper": {
+      "none": "None",
+      "normalZipper": "Normal zipper",
+      "pocketZipper": "Pocket zipper",
+      "doubleZipper": "Double zipper",
+      "sliceZipper": "Slice zipper"
+    }
+  },
+  "main": {
+    "Sentence1": "Innovative packaging manufacturing platform",
+    "Sentence2": "for collaboration between Buyers and Suppliers",
+    "Collaboration": "More than 500 buyers and Supplier that Packposs has collaborated with",
+    "BuyerIntroTitle": "Start a new project with the world's leading manufacturer.",
+    "BuyerIntroDesc1": "You can compare the prices of different manufacturers",
+    "BuyerIntroDesc2": "and make the custom packaging reasonably.",
+    "SupplierIntroTitle": "Expand your business world wide with Packposs.",
+    "SupplierIntroDesc1": "You can compare the prices of different manufacturers",
+    "SupplierIntroDesc2": "and make the custom packaging reasonably.",
+    "SupplierAdvantageTitle1": "Compare Free Quotes",
+    "SupplierAdvantageDesc1-1": "We delivers quick turn-around for all",
+    "SupplierAdvantageDesc1-2": "custom packaging needs from",
+    "SupplierAdvantageDesc1-3": "design to shipment",
+    "SupplierAdvantageTitle2": "Quick Turn-Around",
+    "SupplierAdvantageDesc2-1": "We delivers quick turn-around for all",
+    "SupplierAdvantageDesc2-2": "custom packaging needs from",
+    "SupplierAdvantageDesc2-3": "design to shipment",
+    "SupplierAdvantageTitle3": "High-Quality",
+    "SupplierAdvantageDesc3-1": "We offer High-Quality packaging",
+    "SupplierAdvantageDesc3-2": "with verified suppliers and experts.",
+    "SupplierAdvantageTitle4": "Global Shipping",
+    "SupplierAdvantageDesc4-1": "The products can be shipped",
+    "SupplierAdvantageDesc4-2": "anywhere in the world with door to",
+    "SupplierAdvantageDesc4-3": "door service.",
+    "ProcessOrderListTitle1": "Create a item",
+    "ProcessOrderListDesc1-1": "Consider the various categories and specifications",
+    "ProcessOrderListDesc1-2": "and build up with your own custom packaging.",
+    "ProcessOrderListTitle2": "Request quote",
+    "ProcessOrderListDesc2-1": "Select an item with sufficient specifications and",
+    "ProcessOrderListDesc2-2": "request a quote with quantity, delivery.",
+    "ProcessOrderListTitle3": "Request quote",
+    "ProcessOrderListDesc3-1": "Select an item with sufficient specifications and",
+    "ProcessOrderListDesc3-2": "request a quote with quantity, delivery.",
+    "ProcessOrderListTitle4": "Submit order",
+    "ProcessOrderListDesc4-1": "Take opportunities of new and diverse project",
+    "ProcessOrderListDesc4-2": "by registering for a quote.",
+    "customizedSlideListTitle1": "Customized Folding carton box",
+    "customizedSlideListDesc1-1": "Compare quotes from different manufacturers",
+    "customizedSlideListDesc1-2": "and start the project with a matched partner.",
+    "customizedSlideListTitle2": "Customized Folding carton box",
+    "customizedSlideListDesc2-1": "Compare quotes from different manufacturers",
+    "customizedSlideListDesc2-2": "and start the project with a matched partner."
+  },
+  "header": {
+    "opportunities": "Opportunities",
+    "quotes": "Quotes",
+    "myTransaction": "My Transaction",
+    "managingOrders": "Managing orders"
+  },
+  "sideMenu": {
+    "managingOrders": "Managing orders",
+    "main": "main",
+    "create": "create",
+    "items": "items",
+    "new": "new",
+    "open": "open",
+    "all": "all",
+    "inProgress": "In progress",
+    "submitted": "submitted",
+    "ordered": "ordered",
+    "declined": "declined",
+    "unSubmitted": "Un submitted"
+  },
+  "supplierPhrase": {
+    "getStarted": "Get Started",
+    "requestOn": "Request on",
+    "requestId": "Request Id",
+    "shipping": "Shipping",
+    "expiration": "Expiration",
+    "nickname": "Nickname",
+    "maxQuantityUnits": "Max quantity units",
+    "item": "item",
+    "viewDetails": "View details",
+    "itemId": "item ID",
+    "category": "Category",
+    "specifications": "Specifications",
+    "quote": "Quote",
+    "price": "Price",
+    "style": "Style",
+    "size": "Size",
+    "material": "Material",
+    "colors": "Colors",
+    "coating": "Coating",
+    "finish": "Finish",
+    "comments": "Comments",
+    "whatDoYouPack": "what do you pack",
+    "requestOverview": "Request overview",
+    "submitRequest": "Submit request",
+    "submitRequestWarningDesc": "There are 3 items that have not been quoted.",
+    "pricing": "Pricing",
+    "quantity": "Quantity",
+    "unitPrice": "Unit price",
+    "total": "Total",
+    "tooling": "Tooling",
+    "type": "Type",
+    "cost": "Cost",
+    "notes": "Notes",
+    "wouldYouLikeYoProceed": "Would you like to proceed?",
+    "cancel": "cancel",
+    "ok": "ok"
+  },
+  "searchFilter": {
+    "search": "search"
+  },
+  "managingOrder": {
+    "manageYourOrder": "manage your order",
+    "step1": "step 1",
+    "step2": "step 2",
+    "step3": "step 3",
+    "step4": "step 4",
+    "step1Text": "Create new item",
+    "step2Text": "Request quotes",
+    "step3Text": "Review your request from manager",
+    "step4Text": "Get quotes and Place an order",
+    "create": "create"
+  },
+  "managingPackagingCreate": {
+    "step1TitleText": "Select style",
+    "step2TitleText": "Select a SubCategory",
+    "step3TitleText": "Select a style",
+    "step4TitleText": "Specification",
+    "step1": "step 1",
+    "step2": "step 2",
+    "step3": "step 3",
+    "step4": "step 4",
+    "step1Text": "Category",
+    "step2Text": "Sub Category",
+    "step3Text": "Style",
+    "step4Text": "Specification",
+    "size": "size",
+    "material": "material",
+    "wrapping paper": "wrapping paper",
+    "print color": "print color",
+    "coating": "coating",
+    "finish": "finish",
+    "extras": "extras",
+    "print surface": "print surface",
+    "easy cut": "easy cut",
+    "zipper": "zipper",
+    "duplicate selection available": "duplicate selection available",
+    "notes": "notes",
+    "documents": "documents",
+    "what do you pack?": "what do you pack?",
+    "nickname": "nickname"
+  },
+  "packagingList": {
+    "items": "items",
+    "request Quotes": "request Quotes",
+    "view details": "view details",
+    "category": "category",
+    "subCategory": "sub category",
+    "style": "style",
+    "size": "size",
+    "nickname": "nickname"
+  },
+  "specificationContent": {
+    "itemID": "item ID",
+    "category": "category",
+    "subCategory": "sub Category",
+    "sizeUnit": "sizeUnit",
+    "sizeSpec": "sizeSpec",
+    "grammage": "grammage",
+    "material": "material",
+    "chipBoard": "chipBoard",
+    "wrappingPaper": "wrappingPaper",
+    "printColor": "printColor",
+    "coating": "coating",
+    "finish": "finish",
+    "extras": "extras",
+    "printSurface": "printSurface",
+    "easyCut": "easyCut",
+    "zipper": "zipper",
+    "comments": "comments",
+    "whatDoYouPack": "what do you pack",
+    "nickName": "nickName",
+    "documents": "documents",
+    "download": "download",
+    "toast": {
+      "errorRequiredPrefix": "is required.",
+      "errorToast1": "One or more documents is required.",
+      "sizeSpecErrorToast": "sizeSpec must be a positive number greater than 0."
+    }
+  },
+  "detailSpecification": {
+    "specification": "specification",
+    "edit": "edit",
+    "delete": "delete"
+  },
+  "editSpecification": {
+    "editSpecification": "Edit specification",
+    "cancel": "cancel",
+    "update": "update"
+  },
+  "inProgress": {
+    "inProgress": "in progress",
+    "item": "item",
+    "nickName": "nickName",
+    "category": "category",
+    "requested": "requested",
+    "quotes": "quotes",
+    "viewDetails": "View details"
+  },
+  "status": {
+    "quote": {
+      "quoting": "quoting",
+      "submitted": "submitted",
+      "ordered": "ordered",
+      "declined": "declined",
+      "unSubmitted": "un submitted"
+    },
+    "rfq": {
+      "quoting": "quoting",
+      "readyToOrder": "ready to order",
+      "ordered": "ordered",
+      "declined": "declined"
+    }
+  },
+  "packagingRequest": {
+    "requestForQuotes": "Request for quotes",
+    "addressText": "Please enter the correct delivery address.",
+    "address": "address",
+    "backToList": "back to list",
+    "submitRequest": "submit Request",
+    "estimate": "estimate",
+    "modalTitle": "submit request",
+    "modalDesc": "Do you want to submit a request for quotes?\nOnce you submit a request, you can't modify it.",
+    "modalOkText": "submit",
+    "modalCAncelText": "cancel",
+    "errorToast1": "You need to fill out at least one quantity for each item.",
+    "errorToast2": "Please enter the correct address to receive the delivery.",
+    "errorToast3": "Please select it from the packaging item list and try again.  After 2 seconds, it automatically moves to the list page."
+  },
+  "packagingInProgress": {
+    "quote": "quote",
+    "submitted": "submitted",
+    "subTotal": "sub Total",
+    "submitOrder": "submit order",
+    "nickname": "nickname",
+    "category": "category",
+    "style": "style",
+    "quantities": "quantities",
+    "unitPrice": "unit price",
+    "tooling": "tooling",
+    "total": "total",
+    "viewDetail": "View Detail",
+    "noSupplierText": "No supplier has registered a quote yet.",
+    "toast": {
+      "infoToast1": "You can only select from the Ready to order step."
+    }
+  },
+  "signIn": {
+    "signInTitle": "sign in",
+    "signInDesc": "sign in to your Packposs account.",
+    "email": "email",
+    "password": "password",
+    "signIn": "sign in",
+    "signUpDesc": "Don't you have an account?",
+    "forgetPasswordDesc": "Forgot your password?",
+    "toast": {
+      "successToast1": "sign up success",
+      "successToast2": "password change success!"
+    }
+  },
+  "signUp": {
+    "signUpTypeTitle": "create your account type",
+    "signUpTypeBuyerType": "buyer Type",
+    "signUpTypeBuyerDesc": "Purchase from suppliers",
+    "signUpTypeSupplierType": "Supplier Type",
+    "signUpTypeSupplierDesc": "Produce and support customers",
+
+    "signUpFormTitle": "create a new account",
+    "signUpFormDesc": "already have an account?",
+    "email": "email",
+    "send": "send",
+    "verificationCode": "verification code",
+    "verificationDesc": "(6 digit)",
+    "confirm": "confirm",
+    "password": "password",
+    "passwordError": "at least 1 number, at least 1 special character, at least 6-16 lengths",
+    "confirmPassword": "confirm password",
+    "confirmPasswordError": "passwords do not match.",
+    "fullName": "full name",
+    "companyName": "company name",
+    "country": "country",
+    "getStarted": "get started",
+    "toast": {
+      "errorToast1": "Email format is incorrect.",
+      "errorToast2": "mail verify code failure",
+      "errorToast3": "email check please",
+      "errorToast4": "verify code check please",
+      "errorToast5": "password check please",
+      "errorToast6": "full name check please",
+      "errorToast7": "country check please",
+      "errorToast8": "company name check please",
+      "warningToast1": "please send the email again to proceed.",
+      "successToast1": "mail verify code success"
+    }
+  },
+  "passwordReset": {
+    "step1Title": "forgot your password?",
+    "step1Desc": "enter the email associated with your account. We'll send you a temporary password.",
+    "step2Title": "register a new password",
+    "signInMoveText1": "return to login page",
+    "email": "email",
+    "verifyEmail": "verify email",
+    "passwordErrorText": "please provide a valid email address.",
+    "verificationCodeSendText": "we sent the verification code to your email",
+    "verificationCodeLabelText": "enter your Verification code",
+    "verificationCode": "verification code",
+    "verify": "verify",
+
+    "password": "password",
+    "confirmPassword": "confirm password",
+    "RegisterPassword": "register a new password",
+
+    "toast": {
+      "infoToast1": "this email is already in use.",
+      "errorToast1": "email format is incorrect.",
+      "errorToast2": "mail verify code failure",
+      "warningToast1": "please send the email again to proceed.",
+      "successToast1": "mail verify code success",
+
+      "errorToast3": "wrong approach.",
+      "errorToast4": "at least 1 number, at least 1 special character, at least 6-16 lengths",
+      "errorToast5": "passwords do not match."
+    }
+  },
+  "myAccount": {
+    "myAccount": "my account",
+    "confirmPassword": "confirm password",
+    "password": "password",
+    "submit": "submit",
+
+    "emailChangeChoiceModalTitle": "change Email",
+    "emailChangeChoiceModalOkText": "change",
+    "emailChangeChoiceModalCancelText": "cancel",
+
+    "accountInfo": "account info",
+
+    "email": "email",
+    "edit": "edit",
+    "name": "name",
+    "companyName": "company Name",
+    "country": "country",
+    "save": "save",
+
+    "changeYourPassword": "change your password",
+    "currentPassword": "current Password",
+    "newPassword": "new Password",
+    "confirmNewPassword": "confirm new password",
+
+    "deleteAccountChoiceModalTitle": "delete your account",
+    "deleteAccountChoiceModalOkText": "delete",
+    "deleteAccountChoiceModalCancelText": "cancel",
+
+    "deleteAccountChoiceModalDesc1": "If you request for deletion, you cannot log in, and all data will be deleted within 7 days by the administrator.",
+    "deleteAccountChoiceModalDesc2": "Do you want to proceed?",
+
+    "dangerZone": "danger zone",
+    "deleteAccount": "delete account",
+    "deleteAccountDesc": "Delete all your account information. You cannot revert deleted accounts.",
+    "deleteYourAccount": "Delete your account",
+
+    "toast": {
+      "errorToast1": "please write down the required values.",
+      "errorToast2": "please follow the email change procedure.",
+      "successToast1": "the email has been changed.",
+
+      "errorToast3": "the new password does not match."
+    }
+  },
+  "opportunities": {
+    "opportunities": "opportunities",
+    "requestedOn": "requested on",
+    "requestId": "requested ID",
+    "nickname": "nickname",
+    "maxQuantityUnits": "max quantity units",
+    "item": "item",
+    "viewDetails": "view details"
+  },
+  "noItem": {
+    "noItem": "no data"
+  },
+  "pagination": {
+    "showing": "showing",
+    "results": "results"
+  },
+  "quoteRegister": {
+    "quoteRegisterChoiceModalTitle": "quote Request",
+    "quoteRegisterChoiceModalDesc": "are you sure you want to submit an estimate? Modification is not possible when submitting an estimate.",
+    "quoteRegisterChoiceModalOkText": "submit Request",
+    "quoteRegisterChoiceModalCancelText": "CANCEL",
+
+    "requestedOn": "requested on",
+    "requestId": "requested ID",
+    "shipping": "shipping",
+    "expiration": "expiration",
+
+    "nickname": "nickname",
+    "category": "category",
+    "style": "style",
+
+    "quantities": "quantities",
+    "price": "price",
+
+    "specifications": "specifications",
+    "quote": "quote",
+    "pricing": "pricing",
+    "tooling": "tooling",
+    "default": "default",
+    "secondary": "secondary",
+    "quantity": "quantity",
+    "unitPrice": "unit price",
+    "total": "total",
+
+    "type": "type",
+    "cost": "cost",
+
+    "notes": "notes",
+    "save": "save",
+
+    "submitRequest": "submit request"
+  },
+  "quoteView": {
+    "quote": "quote",
+    "requestedOn": "requested on",
+    "requestId": "request ID",
+    "shipping": "shipping",
+    "expiration": "expiration",
+    "submitted": "submitted"
+  },
+  "saga": {
+    "signIn": {
+      "deletedUser": "Unable to log in due to withdrawal application.",
+      "retCode1001": "ID or password error"
+    },
+    "verifyCodeSend": {
+      "sendEmail": "The verification code has been sent to that email!"
+    },
+    "updateUserPwd": {
+      "updatePwdSuccess": "The password has been changed to a new one."
+    },
+    "requestAccountDeletion": {
+      "deletionSuccess": "Your request for withdrawal has been completed."
+    },
+    "myAccountAccessCheck": {
+      "notMatch": "Password does not match."
+    },
+    "awsFileUploadInfo": {
+      "fileUploadError": "An error occurred while uploading the file."
+    },
+    "updatePackagingItem": {
+      "updateSuccess": "Update success!"
+    },
+    "getRfqSupplierList": {},
+    "sendRfqEmail": {
+      "sendMailSuccess": "Mail Transfer Completed"
+    }
+  },
+  "commonReturnCode": {
+    "retCode1": "ERROR CODE 1",
+    "retCode2": "ERROR CODE 2",
+    "retCode3": "ERROR CODE 3",
+    "retCode4": "ERROR CODE 4",
+    "retCode9": "Not allowed",
+    "retCode999": "ERROR CODE 999",
+    "retCode1001": "Login Failed"
+  },
+  "footer": {
+    "companyIntroduction": "Company introduction",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "sendSupplierEmailTab": {
+    "title": "Your request has been registered!",
+    "desc": "You can send a notification to the supplier we recommend.",
+    "cancel": "Cancel",
+    "sendNotification": "Send notification",
+    "matched": "Matched",
+    "times": "times"
+  }
+}
