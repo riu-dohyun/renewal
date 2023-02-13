@@ -27,6 +27,8 @@ const rootReducer = combineReducers({
   layout: layoutReducer,
   noPersistCommon: noPersistCommonReducer,
 });
+
+// console.log("rootReducer >>", rootReducer);
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const sagaMiddleware = createSagaMiddleware();
 export const store = configureStore({
@@ -40,8 +42,8 @@ const makeStore = context => setupStore(context);
 
 export const persistor = persistStore(store);
 
-export const wrapper = createWrapper(makeStore, {
+export const wrapper = createWrapper(store, {
   debug: true,
 });
 
-export default makeStore;
+export default store;

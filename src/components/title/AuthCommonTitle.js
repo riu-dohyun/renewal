@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import logo from "src/assets/logo.png";
@@ -28,7 +29,7 @@ const AuthCommonTitle = props => {
       )}
       <div className="flex flex-col py-10 md:py-6">
         <Link href={`${url.home}`}>
-          <img src={logo} alt="" className="mb-3 w-28 md:w-32" />
+          <Image src={logo} alt="" className="mb-3 w-28 md:w-32" />
         </Link>
         <h1 className="mb-1 text-2xl font-extrabold">{title}</h1>
         {desc && <p className="text-sm text-gray-500">{desc}</p>}

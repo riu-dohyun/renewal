@@ -34,7 +34,6 @@ const CoreContainer = () => {
   }, []);
 
   useEffect(() => {
-    console.log("window >>>", window);
     if (window !== "undefined" && !window) {
       // page 이동 시 최상단 이동
       window.scrollTo(0, 0);
