@@ -34,6 +34,7 @@ function* signInSaga(action) {
             type: userActions.signInSuccess,
             payload: { ...resData, email: action.payload.email },
           });
+          yield action.payload.router.push("/");
         }
       } else {
         // NOTE: Login failure
@@ -187,6 +188,8 @@ function* getMyInfoSaga(action) {
       );
 
       if (retCode === 0) {
+        console.log("resData >>>>>>>>>>>>>>>", resData);
+        console.log("action >>>>>>>>>>>>>>>", action);
         yield put({
           type: userActions.signInSuccess,
           payload: { ...resData, email: action.payload.email },
@@ -317,6 +320,8 @@ function* myAccountAccessCheckSaga(action) {
         });
         toastUtils.errorToast(`${t(`${i18nMiddleKey}.notMatch`)}`);
       }
+
+      return { retCode, i18nMiddleKey };
     },
     errorMessage: "server error",
   });

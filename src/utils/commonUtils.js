@@ -562,29 +562,30 @@ export const numberWithCommas = number => {
 };
 
 export const getAllQueryString = search => {
-  const deleteQuestionMarkString = search.slice(1);
+  console.log("search >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", search);
+  // const deleteQuestionMarkString = search.slice(1);
 
-  const value = deleteQuestionMarkString.split("&").reduce(
-    (acc, cur) => {
-      const keyValue = cur.split("=");
-      const key = keyValue[0];
-      const value = keyValue[1];
+  // const value = deleteQuestionMarkString.split("&").reduce(
+  //   (acc, cur) => {
+  //     const keyValue = cur.split("=");
+  //     const key = keyValue[0];
+  //     const value = keyValue[1];
 
-      if (key === "pageNo") {
-        return { ...acc, pageNo: value };
-      } else if (key === "sort") {
-        return { ...acc, sort: value };
-      } else if (key === "numPageItem") {
-        return { ...acc, numPageItem: value };
-      } else if (key !== "") {
-        acc.search[`${key}`] = value;
-      }
-      return acc;
-    },
-    { search: {} }
-  );
+  //     if (key === "pageNo") {
+  //       return { ...acc, pageNo: value };
+  //     } else if (key === "sort") {
+  //       return { ...acc, sort: value };
+  //     } else if (key === "numPageItem") {
+  //       return { ...acc, numPageItem: value };
+  //     } else if (key !== "") {
+  //       acc.search[`${key}`] = value;
+  //     }
+  //     return acc;
+  //   },
+  //   { search: {} }
+  // );
 
-  return value;
+  return search;
 };
 
 export const isEmptyObject = param => {

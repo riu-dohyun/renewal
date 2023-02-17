@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import * as stringUtils from "src/utils/stringUtils";
 
@@ -34,7 +35,7 @@ const PackagingItem = props => {
           />
         </>
         <div className={activeItemWrapClass}>
-          <img
+          <Image
             src={item.processData.image}
             className="w-full object-cover"
             alt=""

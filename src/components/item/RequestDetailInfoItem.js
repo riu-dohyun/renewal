@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as commonUtils from "src/utils/commonUtils";
@@ -40,7 +41,7 @@ const RequestDetailInfoItem = props => {
               item.findRfqItem && "border-primary-500"
             } bg-white sm:basis-1/4 lg:basis-2/6`}
           >
-            <img
+            <Image
               src={subCategoryInfo.image}
               className="w-full object-cover"
               alt=""

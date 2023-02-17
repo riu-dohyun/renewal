@@ -1,4 +1,5 @@
 import _ from "lodash";
+import Image from "next/image";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { eachSpecFormName } from "src/config/common";
@@ -43,7 +44,7 @@ const SpecificationDetailContentMobile = props => {
   return (
     <>
       <div className="mb-3 w-full">
-        <img
+        <Image
           src={item?.processData?.image}
           className="m-auto w-full max-w-xs"
           alt=""

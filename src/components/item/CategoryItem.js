@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -30,7 +31,7 @@ const CategoryItem = props => {
         data-code={item.code}
         onClick={onClick}
       >
-        <img src={item.image} alt={item.name} className="w-full" />
+        <Image src={item.image} alt={item.name} className="w-full" />
         <div
           className={`absolute top-2 left-2 flex rounded-full border-2 border-white ${
             item.active ? "bg-primary-500" : "bg-gray-300"

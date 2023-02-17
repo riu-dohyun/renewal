@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import cnImg from "src/assets/common/flag_cn.svg";
 import koImg from "src/assets/common/flag_ko.svg";
@@ -18,7 +19,7 @@ const CountryImageItem = props => {
       setNationalFlag(usaImg);
     }
   }, []);
-  return <img src={nationalFlag} className="w-4" />;
+  return <Image src={nationalFlag} className="w-4" alt="" />;
 };
 
 export default CountryImageItem;

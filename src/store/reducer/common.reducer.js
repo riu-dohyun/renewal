@@ -17,6 +17,9 @@ export const initialState = {
 
   // NOTE: lang
   lang: null,
+
+  // NOTE: next.js loading
+  nextLoading: false,
 };
 
 export const commonReducer = {
@@ -77,5 +80,10 @@ export const commonReducer = {
   // NOTE: set lang
   setLang: (state, action) => {
     state.lang = action.payload;
+  },
+
+  // NOTE: Next.js Loading set
+  setNextLoading: (state, action) => {
+    state.nextLoading = action.payload;
   },
 };

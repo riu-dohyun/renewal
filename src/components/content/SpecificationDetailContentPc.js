@@ -1,4 +1,5 @@
 import _ from "lodash";
+import Image from "next/image";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { eachSpecFormName } from "src/config/common";
@@ -44,7 +45,7 @@ const SpecificationDetailContentPc = props => {
   return (
     <div className="flex">
       <div className="mb-3 w-56 flex-none">
-        <img src={item?.processData?.image} className="w-full" alt="" />
+        <Image src={item?.processData?.image} className="w-full" alt="" />
       </div>
       <div className="ml-6 grid grow grid-cols-2 gap-2 2xl:grid-cols-3">
         <dl>

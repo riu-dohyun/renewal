@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
@@ -177,7 +178,7 @@ const SpecificationContainer = props => {
           </h4>
           {sizeImage && (
             <div className="mb-3 w-full self-start overflow-hidden rounded-lg">
-              <img
+              <Image
                 src={sizeImage}
                 className={`mx-auto w-full ${
                   updateStatus ? "max-w-[300px]" : "max-w-[500px]"

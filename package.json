@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "default_start": "next start",
+    "default_start": "next start -p 7503",
     "start": "env-cmd -f .env.dev next dev",
     "prod-start": "env-cmd -f .env.prod next dev",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build & next export",
     "lint": "next lint"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "moment": "^2.29.4",
     "next": "13.1.6",
     "next-redux-wrapper": "^8.1.0",
+    "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-drag-drop-files": "^2.3.8",

@@ -11,15 +11,19 @@ import * as stringUtils from "src/utils/stringUtils";
 const MyAccountContainer = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-
+  const { nextLoading } = useSelector(state => state.common);
   const { uid, email, fullName, companyName, country } = useSelector(
     state => state.user
   );
+
+  console.log(uid, email, fullName, companyName, country);
   const { myAccountAccessCheck } = useSelector(state => state.noPersistCommon);
 
   useEffect(() => {
-    dispatch(userActions.getInfoTrigger({ uid, email }));
-  }, []);
+    if (nextLoading) {
+      dispatch(userActions.getInfoTrigger({ uid, email }));
+    }
+  }, [nextLoading]);
 
   return (
     <>

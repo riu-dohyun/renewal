@@ -15,7 +15,8 @@ const PackagingListContainer = () => {
   const { t } = useTranslation();
   const { uid } = useSelector(state => state.user);
   const router = useRouter();
-  const searchParamsObject = commonUtils.getSearchPageParams(router.search);
+  console.log("router >>", router);
+  const searchParamsObject = commonUtils.getSearchPageParams(router.query);
   const {
     packagingItemsTotalCount,
     packagingItems,

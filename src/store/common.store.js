@@ -23,6 +23,9 @@ export const {
 
   // NOTE: lang 관련
   setLang,
+
+  // NOTE: Next.js Loading set
+  setNextLoading,
 } = commonSlice.actions;
 
 export default commonSlice.reducer;

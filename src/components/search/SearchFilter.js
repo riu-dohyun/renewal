@@ -1,25 +1,20 @@
-import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import * as commonUtils from "src/utils/commonUtils";
 import * as stringUtils from "src/utils/stringUtils";
 
 const SearchFilter = () => {
   const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState("");
-  const [searchParams, setSearchParams] = useSearchParams();
-  const location = useRouter();
-  const locationSearch = location.search;
-  const itemName = searchParams.get("itemName");
-
-  const paramsObject = commonUtils.getSearchParamsProcessingObj(locationSearch);
+  const [showListNum, setShowListNum] = useState("");
+  const router = useRouter();
 
   const showItemPageOnChange = e => {
     const target = e.currentTarget;
     const value = Number(target.value);
 
-    setSearchParams({ ...paramsObject, numPageItem: value });
+    router.query = { ...router.query, numPageItem: value };
+    router.push(router);
   };
 
   const searchOnChange = e => {
@@ -30,11 +25,15 @@ const SearchFilter = () => {
 
   const itemNameSearchBtnClick = e => {
     e.preventDefault();
-    setSearchParams({ ...paramsObject, itemName: searchValue });
+    router.query = { ...router.query, itemName: searchValue };
+    router.push(router);
   };
 
   useEffect(() => {
-    setSearchValue(itemName ? itemName : "");
+    setSearchValue(router.query.itemName ? router.query.itemName : "");
+    setShowListNum(
+      router.query.numPageItem ? router.query.numPageItem : "show list"
+    );
   }, []);
   return (
     <>
@@ -70,7 +69,7 @@ const SearchFilter = () => {
           id=""
           onChange={showItemPageOnChange}
           className="form-select rounded border-transparent text-sm font-semibold"
-          defaultValue="show list"
+          defaultValue={showListNum}
         >
           <option value="show list" disabled>
             Show List

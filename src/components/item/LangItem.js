@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const LangItem = props => {
   const { lang, langImg, onClick } = props;
   return (
@@ -6,7 +8,7 @@ const LangItem = props => {
       data-lang={lang}
       onClick={onClick}
     >
-      <img src={langImg} className="mr-2 w-4" alt={lang} />
+      <Image src={langImg} className="mr-2 w-4" alt={lang} />
       {lang.toUpperCase()}
     </span>
   );

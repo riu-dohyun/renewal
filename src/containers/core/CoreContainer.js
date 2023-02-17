@@ -21,12 +21,12 @@ const CoreContainer = () => {
 
   useEffect(() => {
     detectResize();
-    getInfoTriggerFunc();
+    // getInfoTriggerFunc();
     const setIntervalGetMyInfo = setInterval(() => {
       if (commonUtils.isLogin(uid)) {
         getInfoTriggerFunc();
       }
-    }, 1000 * 10 * 10000000);
+    }, 1000 * 60 * 12);
 
     return () => {
       clearInterval(setIntervalGetMyInfo);
@@ -34,12 +34,10 @@ const CoreContainer = () => {
   }, []);
 
   useEffect(() => {
-    if (window !== "undefined" && !window) {
+    if (window !== "undefined") {
       // page 이동 시 최상단 이동
       window.scrollTo(0, 0);
       dispatch(layoutActions.setMobileLnbActive(false));
-
-      console.log(window.innerWidth);
 
       window.addEventListener("resize", detectResize);
       return () => {

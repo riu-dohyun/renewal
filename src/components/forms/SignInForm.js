@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +9,7 @@ import * as stringUtils from "src/utils/stringUtils";
 import * as toastUtils from "src/utils/toastUtils";
 
 const SignInForm = () => {
+  const router = useRouter();
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const { signUpUserLogin, passwordResetStep } = useSelector(
@@ -23,7 +25,7 @@ const SignInForm = () => {
     const value = target.value;
     const role = target.dataset.role;
 
-    setForms({ ...forms, [`${role}`]: value });
+    setForms({ ...forms, [`${role}`]: value, router });
   };
 
   const signInBtnClick = e => {

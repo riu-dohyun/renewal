@@ -1,4 +1,5 @@
 import _ from "lodash";
+import Image from "next/image";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { eachSpecFormName } from "src/config/common";
@@ -49,7 +50,7 @@ const SpecificationDetailContent = props => {
       )}
       <div className="flex justify-between">
         <div className="w-full basis-5/12 self-start overflow-hidden rounded border xl:basis-3/6">
-          <img src={item?.processData?.image} className="w-full" alt="" />
+          <Image src={item?.processData?.image} className="w-full" alt="" />
         </div>
         <div className="ml-4 w-full basis-7/12 xl:basis-3/6">
           <dl className="grid grid-cols-2 items-center gap-3">

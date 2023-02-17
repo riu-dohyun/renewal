@@ -11,8 +11,8 @@ import * as stringUtils from "src/utils/stringUtils";
 
 const PackagingInProgressContainer = () => {
   const { t } = useTranslation();
-  const location = useRouter();
-  const searchParamsObject = commonUtils.getSearchPageParams(location.search);
+  const router = useRouter();
+  const searchParamsObject = commonUtils.getSearchPageParams(router.query);
 
   const { uid, role } = useSelector(state => state.user);
   const { inProgressItems, inProgressTotalNum } = useSelector(
@@ -30,7 +30,7 @@ const PackagingInProgressContainer = () => {
     );
 
     return () => {};
-  }, [location.search]);
+  }, [router.query]);
 
   return (
     <>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -110,7 +111,7 @@ const QuoteInfoItem = props => {
 
         <div className="flex items-center p-3 md:basis-5/12 md:p-0">
           <div className="w-32 flex-none overflow-hidden rounded-sm border sm:w-36">
-            <img src={info.processData.image} className="w-full" alt="" />
+            <Image src={info.processData.image} className="w-full" alt="" />
           </div>
           <div className="ml-4 grow">
             <dl className="mb-3 text-sm">

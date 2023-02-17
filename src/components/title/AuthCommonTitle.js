@@ -5,7 +5,7 @@ import logo from "src/assets/logo.png";
 import url from "src/config/url";
 
 const AuthCommonTitle = props => {
-  const navigate = useRouter();
+  const router = useRouter();
   const { title, desc, backButtonOn = false, backEvent = null } = props;
 
   const goBackButtonClick = e => {
@@ -13,7 +13,7 @@ const AuthCommonTitle = props => {
     if (backEvent) {
       backEvent();
     } else {
-      navigate(-1);
+      router.back();
     }
   };
 

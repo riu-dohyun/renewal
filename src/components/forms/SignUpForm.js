@@ -16,7 +16,7 @@ import * as toastUtils from "src/utils/toastUtils";
 const SignUpForm = () => {
   const { t } = useTranslation();
   // ANCHOR: FUNCTION
-  const navigate = useRouter();
+  const router = useRouter();
   const dispatch = useDispatch();
   const { uid, timeOver, verifyCodeHash, verifyCodeCheck, signUpUserLogin } =
     useSelector(state => state.user);
@@ -248,7 +248,7 @@ const SignUpForm = () => {
       setUserRole(null);
       dispatch(userAction.initUserType());
     } else {
-      navigate(-1);
+      router.back();
     }
   };
 

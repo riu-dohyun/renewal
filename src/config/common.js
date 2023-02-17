@@ -182,7 +182,7 @@ export const fileUploadExtList = [
   "PPTX",
 ];
 
-export const developMode = process.env.REACT_APP_SET === "dev";
+export const developMode = process.env.NODE_ENV === "development";
 
 export const pageShowCountList = [
   {
@@ -290,8 +290,8 @@ export const i18nKey = {
 };
 
 if (!developMode) {
-  console.log = () => {};
-  console.error = () => {};
+  // console.log = () => {};
+  // console.error = () => {};
 }
 
 export const showFooterList = [

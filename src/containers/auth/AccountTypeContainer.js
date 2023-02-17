@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import iconBuyer from "src/assets/common/icon_buyer.png";
@@ -43,7 +44,7 @@ const AccountTypeContainer = props => {
               className="flex flex-col justify-center rounded-lg bg-slate-200 p-4 text-center transition hover:shadow-lg hover:shadow-slate-300/50"
             >
               <div className="mx-auto mb-3 flex">
-                <img src={item.image} className="w-full" alt={item.imgAlt} />
+                <Image src={item.image} className="w-full" alt={item.imgAlt} />
               </div>
               <h3 className="w-full text-center text-xl text-primary-500">
                 {item.title}

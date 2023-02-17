@@ -1,28 +1,39 @@
+import { setNextLoading } from "@/store/common.store";
 import "@/styles/globals.css";
 import "@/styles/notFound.css";
-import { Provider } from "react-redux";
+import { useEffect } from "react";
+import { Provider, useDispatch } from "react-redux";
 import "react-toastify/dist/ReactToastify.css";
+import { persistStore } from "redux-persist";
+import { session } from "redux-persist/lib/storage";
 import { store, wrapper } from "src/store/store";
 import "swiper/css";
 
-const App = ({ Component, ...pageProps }) => {
+function MyApp({ Component, pageProps }) {
+  const dispatch = useDispatch();
+
+  dispatch(setNextLoading(true));
+  useEffect(() => {
+    return () => {
+      dispatch(setNextLoading(false));
+    };
+  }, []);
+
+  persistStore(store, {
+    key: "root",
+    storage: session,
+    serialize: state => JSON.stringify(state),
+  });
+
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-        rel="stylesheet"
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet"
-      ></link>
       <Provider store={store}>
-        {/* <PersistGate persistor={persistor} loading={null}> */}
+        {/* <PersistGate loading={null} persistor={persistor}> */}
         <Component {...pageProps} />
         {/* </PersistGate> */}
       </Provider>
     </>
   );
-};
+}
 
-export default wrapper.withRedux(App);
+export default wrapper.withRedux(MyApp);

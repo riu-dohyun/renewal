@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import * as stringUtils from "src/utils/stringUtils";
 import PackagingQuotesItem from "./PackagingQuotesItem";
@@ -9,7 +10,7 @@ const PackagingItem = props => {
   return (
     <>
       <div className="relative mb-3 self-start overflow-hidden rounded border sm:mb-0 sm:w-44">
-        <img
+        <Image
           src={item.processData.image}
           className="w-full object-cover"
           alt=""

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import url from "src/config/url";
@@ -28,7 +29,11 @@ const OpportunitiesListing = props => {
             className="bg-white p-3 shadow transition sm:flex lg:p-6 lg:shadow-none"
           >
             <div className="mb-3 overflow-hidden rounded border sm:mb-0 sm:w-44">
-              <img src={categoryInfo.image} className="w-full object-cover" />
+              <Image
+                src={categoryInfo.image}
+                className="w-full object-cover"
+                alt=""
+              />
             </div>
             <div className="flex grow flex-col md:flex-row md:items-center md:justify-between">
               <div className="flex flex-col p-4 xl:ml-10 xl:p-0">

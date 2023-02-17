@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import create_step01 from "src/assets/managingOrder/create_step01.png";
@@ -17,7 +18,7 @@ export const ManagingOrderItem = props => {
         </span>
       </div>
       <div className="mx-auto mb-4 w-full max-w-[90px] lg:mb-8 xl:max-w-[120px]">
-        <img src={image} className="w-full" alt="" />
+        <Image src={image} className="w-full" alt="" />
       </div>
       <div className="mb-4 flex flex-col items-center">
         <h4 className="text-center lg:text-xl">
@@ -60,7 +61,7 @@ const ManagingOrderContainer = () => {
         </div>
         <div className="flex w-full justify-center">
           <Link
-            to={url.buyer.packagingCreate}
+            href={`${url.buyer.packagingCreate}`}
             className="flex items-center rounded-full bg-primary-500 px-8 py-2 font-semibold text-white"
           >
             <span className="material-symbols-outlined mr-1 flex text-xl">
