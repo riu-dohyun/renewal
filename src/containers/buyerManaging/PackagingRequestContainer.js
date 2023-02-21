@@ -15,7 +15,7 @@ import * as toastUtils from "src/utils/toastUtils";
 const PackagingRequestContainer = () => {
   let listPageMoveSetTimeout = null;
   const { t } = useTranslation();
-  const navigate = useRouter();
+  const router = useRouter();
   const dispatch = useDispatch();
   const requestForm = useRef();
   const { uid } = useSelector(state => state.user);
@@ -26,7 +26,7 @@ const PackagingRequestContainer = () => {
   });
 
   const backToListOnClickEvent = () => {
-    navigate(url.buyer.packagingList);
+    router.push(url.buyer.packagingList);
   };
 
   const getDate = () => {
@@ -93,7 +93,7 @@ const PackagingRequestContainer = () => {
       shippingAddress: address,
       itemList: JSON.stringify(itemList),
       deadline: getDate(),
-      navigate,
+      navigate: router,
     };
 
     dispatch(packagingActions.createPackagingItemRequestTrigger(params));
@@ -130,7 +130,7 @@ const PackagingRequestContainer = () => {
       `${stringUtils.firstCharToUpperCase(t("packagingRequest.errorToast3"))}`
     );
     listPageMoveSetTimeout = setTimeout(() => {
-      navigate(url.buyer.packagingList);
+      router.push(url.buyer.packagingList);
     }, 2000);
     return null;
   }

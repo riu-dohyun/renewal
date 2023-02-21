@@ -7,12 +7,12 @@ import { CommonTemplate } from "src/containers/template";
 import Wrapper from "src/containers/wrapper";
 import * as commonUtils from "src/utils/commonUtils";
 
-const ManagingOrder = () => {
+const NewOpportunities = () => {
   const { uid, role } = useSelector(state => state.user);
   const isLogin = commonUtils.isLogin(uid);
-  const isBuyer = commonUtils.checkBuyerType(role);
+  const isSupplier = commonUtils.checkSupplierType(role);
   return (
-    <AuthRoute isAllowed={isLogin && isBuyer}>
+    <AuthRoute isAllowed={isLogin && isSupplier}>
       <Wrapper
         title={define.title}
         meta={[
@@ -25,14 +25,14 @@ const ManagingOrder = () => {
         <CommonTemplate
           Header={<containers.HeaderContainer />}
           // Footer={<containers.FooterContainer />}
-          type={commonConfig.userType.buyer}
-          notPadding={true}
+          type={commonConfig.userType.supplier}
+          isContent={true}
         >
-          <containers.ManagingOrderContainer />
+          <containers.OpportunitiesContainer />
         </CommonTemplate>
       </Wrapper>
     </AuthRoute>
   );
 };
 
-export default ManagingOrder;
+export default NewOpportunities;

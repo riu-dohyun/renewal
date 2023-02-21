@@ -10,6 +10,7 @@ export default function Document() {
         ></link>
       </Head>
       <body className="bg-gray-50 text-gray-700">
+        <div id="root"></div>
         <Main />
         <NextScript />
       </body>

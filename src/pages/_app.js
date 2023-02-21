@@ -1,3 +1,4 @@
+import "@/i18n/i18n";
 import { setNextLoading } from "@/store/common.store";
 import "@/styles/globals.css";
 import "@/styles/notFound.css";

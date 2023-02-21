@@ -128,6 +128,8 @@ const QuoteRegisterContainer = () => {
       quoteList: quoteList,
     };
 
+    console.log("checkUpdate >>", checkUpdate);
+
     if (checkUpdate) {
       dispatch(
         estimateActions.updateQuoteTrigger({
@@ -213,8 +215,11 @@ const QuoteRegisterContainer = () => {
         item => item.findRfqItem !== null
       );
 
+      console.log("findRfqItemFilter.length >>>", findRfqItemFilter.length);
       if (findRfqItemFilter.length > 0) {
         setCheckUpdate(true);
+      } else {
+        setCheckUpdate(false);
       }
 
       const quoteNullCount = quoteListMerge.reduce((acc, cur) => {

@@ -63,6 +63,7 @@ const OpportunitiesContainer = () => {
                 <Pagination
                   totalCount={opportunityTotalCount}
                   paramsObj={searchParamsObject}
+                  changeEvent={getList}
                 />
               </div>
             </div>

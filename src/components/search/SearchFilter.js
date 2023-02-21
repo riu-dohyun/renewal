@@ -3,18 +3,29 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as stringUtils from "src/utils/stringUtils";
 
-const SearchFilter = () => {
+const SearchFilter = props => {
+  const { changeEvent } = props;
   const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState("");
   const [showListNum, setShowListNum] = useState("");
   const router = useRouter();
 
-  const showItemPageOnChange = e => {
+  const changeEventFunc = async params => {
+    if (changeEvent) {
+      await changeEvent(params);
+    }
+  };
+
+  const showItemPageOnChange = async e => {
     const target = e.currentTarget;
     const value = Number(target.value);
-
     router.query = { ...router.query, numPageItem: value };
-    router.push(router);
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, numPageItem: value },
+    });
+
+    await changeEventFunc();
   };
 
   const searchOnChange = e => {
@@ -23,10 +34,14 @@ const SearchFilter = () => {
     setSearchValue(value);
   };
 
-  const itemNameSearchBtnClick = e => {
+  const itemNameSearchBtnClick = async e => {
     e.preventDefault();
     router.query = { ...router.query, itemName: searchValue };
-    router.push(router);
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, itemName: searchValue },
+    });
+    await changeEventFunc();
   };
 
   useEffect(() => {

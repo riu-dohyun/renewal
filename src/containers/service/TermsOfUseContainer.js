@@ -1331,20 +1331,21 @@ const TermsOfUseContainer = () => {
                       help through RIU.
                     </p>
                   </li>
+                  <li>
+                    <p>Step 3: Institutional Arbitration</p>
+                    <p>
+                      In case of failure to find middle ground in the previous
+                      two steps, the dispute will be settled by the arbitration
+                      decision of the Korean Commercial Arbitration Board (a
+                      permanent legal institution established under the
+                      Arbitration Act). RIU shall review the documents required
+                      for the request for arbitration and shall provide full
+                      support for the arbitration costs. However, both parties
+                      are responsible for the cost exceeding the limit of
+                      support.
+                    </p>
+                  </li>
                 </ul>
-                <li>
-                  <p>Step 3: Institutional Arbitration</p>
-                  <p>
-                    In case of failure to find middle ground in the previous two
-                    steps, the dispute will be settled by the arbitration
-                    decision of the Korean Commercial Arbitration Board (a
-                    permanent legal institution established under the
-                    Arbitration Act). RIU shall review the documents required
-                    for the request for arbitration and shall provide full
-                    support for the arbitration costs. However, both parties are
-                    responsible for the cost exceeding the limit of support.
-                  </p>
-                </li>
               </li>
               <li>
                 In case the Clients and Partners improperly abuse or excessively

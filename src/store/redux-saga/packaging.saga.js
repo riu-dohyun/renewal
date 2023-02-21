@@ -170,7 +170,7 @@ function* itemCreateSaga(action) {
           type: packagingActions.itemCreateSuccess,
           payload: resData.itemId,
         });
-        yield action.payload.navigate(url.buyer.packagingList);
+        yield action.payload.navigate.push(url.buyer.packagingList);
       }
 
       return { retCode, i18nMiddleKey };
@@ -326,7 +326,7 @@ export function* createPackagingItemRequestSaga(action) {
       );
 
       if (retCode === 0) {
-        yield action.payload.navigate(url.buyer.packagingInProgress);
+        yield action.payload.navigate.push(url.buyer.packagingInProgress);
       }
 
       return { retCode, i18nMiddleKey };

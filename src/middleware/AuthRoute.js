@@ -11,7 +11,7 @@ const AuthRoute = props => {
     if (!isAllowed && nextLoading) {
       router.push(redirectPath);
     }
-  }, []);
+  }, [isAllowed, nextLoading]);
   return children;
 };
 

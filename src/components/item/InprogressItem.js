@@ -9,7 +9,7 @@ import StatusItem from "./StatusItem";
 
 const InprogressItem = props => {
   const { t } = useTranslation();
-  const navigate = useRouter();
+  const router = useRouter();
   const hideContent = useRef();
   const [height, setHeight] = useState(0);
   const { item, role, openClickEvent, active } = props;
@@ -18,12 +18,12 @@ const InprogressItem = props => {
     if (role === commonConfig.userType.supplier) {
       const status = Number(item.status);
       if (status === 1000) {
-        navigate(`${url.supplier.quoteRegister}/${item.rfqId}`);
+        router.push(`${url.supplier.quoteRegister}/${item.rfqId}`);
       } else {
-        navigate(`${url.supplier.quoteView}/${item.rfqId}`);
+        router.push(`${url.supplier.quoteView}/${item.rfqId}`);
       }
     } else if (role === commonConfig.userType.buyer) {
-      navigate(`${url.buyer.packagingInProgressDetail}/${item.rfqId}`);
+      router.push(`${url.buyer.packagingInProgressDetail}/${item.rfqId}`);
     }
   };
 

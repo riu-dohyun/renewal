@@ -1,3 +1,4 @@
+import i18n from "@/i18n/i18n";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import flagCn from "src/assets/common/flag_cn.svg";
@@ -24,6 +25,7 @@ const LangSelect = props => {
   const i18nOnChange = e => {
     const target = e.currentTarget;
     const value = target.dataset.lang;
+    i18n.changeLanguage();
     dispatch(commonActions.setLang(value));
     setActive(false);
   };

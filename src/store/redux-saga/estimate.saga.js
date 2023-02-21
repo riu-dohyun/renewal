@@ -35,6 +35,8 @@ export function* getOpportunitiesListSaga(action) {
           retCode,
         });
       }
+
+      return { retCode, i18nMiddleKey };
     },
     errorMessage: "server error",
   });
@@ -167,7 +169,7 @@ function* submitQuoteSaga(action) {
       const { retCode } = yield commonUtils.getResponseData(submitQuoteInfo);
 
       if (retCode === 0) {
-        action.payload.navigate(
+        action.payload.navigate.push(
           `${url.supplier.quoteView}/${action.payload.rfqId}`
         );
       }

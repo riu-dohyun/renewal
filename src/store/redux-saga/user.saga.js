@@ -188,8 +188,6 @@ function* getMyInfoSaga(action) {
       );
 
       if (retCode === 0) {
-        console.log("resData >>>>>>>>>>>>>>>", resData);
-        console.log("action >>>>>>>>>>>>>>>", action);
         yield put({
           type: userActions.signInSuccess,
           payload: { ...resData, email: action.payload.email },

@@ -17,7 +17,7 @@ const ServiceNav = () => {
           } flex`}
         >
           <Link
-            href={url.service.termsOfUse}
+            href={`${url.service.termsOfUse}`}
             className="relative whitespace-nowrap p-3 text-center font-semibold"
           >
             {t("footer.termsOfService")}
@@ -29,7 +29,7 @@ const ServiceNav = () => {
           } flex`}
         >
           <Link
-            href={url.service.privacyPolicy}
+            href={`${url.service.privacyPolicy}`}
             className="relative whitespace-nowrap p-3 text-center font-semibold"
           >
             {t("footer.privacyPolicy")}

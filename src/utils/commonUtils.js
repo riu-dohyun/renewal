@@ -76,7 +76,7 @@ export function* commonSagaWrapper(props) {
     if (retCode !== undefined) {
       if (retCode === 9) {
         yield localStorage.removeItem("persist:root");
-        yield navigate(url.home);
+        yield navigate?.push(url.home);
         return false;
       }
 
@@ -562,30 +562,22 @@ export const numberWithCommas = number => {
 };
 
 export const getAllQueryString = search => {
-  console.log("search >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", search);
-  // const deleteQuestionMarkString = search.slice(1);
+  let returnObj = { search: {} };
+  for (const key in search) {
+    if (key === "pageNo") {
+      returnObj = { ...returnObj, pageNo: search[key] };
+    } else if (key === "sort") {
+      returnObj = { ...returnObj, sort: search[key] };
+    } else if (key === "numPageItem") {
+      returnObj = { ...returnObj, numPageItem: search[key] };
+    } else if (key === "status") {
+      returnObj.search[`${key}`] = [search[key]];
+    } else {
+      returnObj.search[`${key}`] = search[key];
+    }
+  }
 
-  // const value = deleteQuestionMarkString.split("&").reduce(
-  //   (acc, cur) => {
-  //     const keyValue = cur.split("=");
-  //     const key = keyValue[0];
-  //     const value = keyValue[1];
-
-  //     if (key === "pageNo") {
-  //       return { ...acc, pageNo: value };
-  //     } else if (key === "sort") {
-  //       return { ...acc, sort: value };
-  //     } else if (key === "numPageItem") {
-  //       return { ...acc, numPageItem: value };
-  //     } else if (key !== "") {
-  //       acc.search[`${key}`] = value;
-  //     }
-  //     return acc;
-  //   },
-  //   { search: {} }
-  // );
-
-  return search;
+  return returnObj;
 };
 
 export const isEmptyObject = param => {
@@ -595,12 +587,14 @@ export const isEmptyObject = param => {
 
 export const setSearchPageParams = props => {
   const { sort, pageNo, search, numPageItem } = props;
-  return {
+  const obj = {
     sort: sort ? sort : 0,
-    search: !isEmptyObject() ? JSON.stringify(search) : "{}",
+    search: !isEmptyObject(search) ? JSON.stringify(search) : "{}",
     pageNo: pageNo ? pageNo - 1 : 0,
     numPageItem: numPageItem ? numPageItem : 10,
   };
+
+  return obj;
 };
 
 export const getSearchPageParams = locationSearch => {

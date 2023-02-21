@@ -1,3 +1,4 @@
+import LangSelect from "@/components/select/LangSelect";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,7 +15,7 @@ import * as commonUtils from "src/utils/commonUtils";
 const HeaderContainer = () => {
   const { uid, role } = useSelector(state => state.user);
   const { mobileLnbActive } = useSelector(state => state.layout);
-  // const { lang } = useSelector(state => state.common);
+  const { lang } = useSelector(state => state.common);
   const dispatch = useDispatch();
   const location = useRouter();
   const { t } = useTranslation();
@@ -150,7 +151,7 @@ const HeaderContainer = () => {
       <div className="ml-auto flex basis-2/6 justify-end sm:basis-auto">
         <ul className="flex">
           <li className="relative flex items-center">
-            {/* <LangSelect lang={lang} /> */}
+            <LangSelect lang={lang} />
           </li>
           <li ref={appAndUserIconRef}>
             {isLogin ? (

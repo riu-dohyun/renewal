@@ -1,6 +1,7 @@
-const prefix = {
+export const prefix = {
   packaging: "/packaging",
   service: "/service",
+  myTransaction: "/my-transaction",
 };
 
 const url = {
@@ -25,12 +26,12 @@ const url = {
     quoteRegister: "/quote-register",
     quoteView: "/quote-view",
 
-    myTransaction: "/my-transaction",
-    inProgress: "/in-progress",
-    submitted: "/submitted",
-    ordered: "/ordered",
-    declined: "/declined",
-    unSubmitted: "/un-submitted",
+    myTransaction: `${prefix.myTransaction}/all`,
+    inProgress: `${prefix.myTransaction}/in-progress`,
+    submitted: `${prefix.myTransaction}/submitted`,
+    ordered: `${prefix.myTransaction}/ordered`,
+    declined: `${prefix.myTransaction}/declined`,
+    unSubmitted: `${prefix.myTransaction}/un-submitted`,
   },
   service: {
     termsOfUse: `${prefix.service}/terms-of-use`,

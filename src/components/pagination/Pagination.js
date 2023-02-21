@@ -1,20 +1,22 @@
-import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import * as commonUtils from "src/utils/commonUtils";
 import * as stringUtils from "src/utils/stringUtils";
 
 const Pagination = props => {
   const { t } = useTranslation();
-  const { totalCount, paramsObj } = props;
+  const { totalCount, paramsObj, changeEvent = null } = props;
+  const router = useRouter();
   const { numPageItem, pageNo } = paramsObj;
-  // eslint-disable-next-line no-unused-vars
-  const [searchParams, setSearchParams] = useSearchParams();
-  const locationSearch = location.search;
-  const paramsObject = commonUtils.getSearchParamsProcessingObj(locationSearch);
 
   const [pageCount, setPageCount] = useState(0);
   const [pageArray, setPageArray] = useState([]);
+
+  const changeEventFunc = async params => {
+    if (changeEvent) {
+      await changeEvent(params);
+    }
+  };
 
   const getStartAndEndPage = (pageNo, pageCounts) => {
     const num = Number(pageNo) + 1;
@@ -36,16 +38,21 @@ const Pagination = props => {
         .map((item, idx) => item + idx)
         .slice(0, 10)
     );
-  }, [paramsObj]);
+  }, [paramsObj, totalCount]);
 
-  const pageNoMove = e => {
+  const pageNoMove = async e => {
     e.preventDefault();
     const target = e.currentTarget;
     const value = Number(target.dataset.page);
-    setSearchParams({ ...paramsObject, pageNo: value });
+    router.query = { ...router.query, pageNo: value };
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query },
+    });
+    await changeEventFunc();
   };
 
-  const arrowPageNoMove = e => {
+  const arrowPageNoMove = async e => {
     e.preventDefault();
     const target = e.currentTarget;
     const type = target.dataset.type;
@@ -57,13 +64,19 @@ const Pagination = props => {
     }
     value = value < 1 ? 1 : value;
     if (value !== null) {
-      setSearchParams({ ...paramsObject, pageNo: value });
+      router.query = { ...router.query, pageNo: value };
+      router.push({
+        pathname: router.pathname,
+        query: { ...router.query },
+      });
+      await changeEventFunc();
     }
   };
 
   if (pageArray.length === 0) {
     return <></>;
   }
+
   return (
     <>
       <div className="flex flex-1 items-center justify-between sm:hidden">

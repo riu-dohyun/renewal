@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import NoItem from "src/components/item/NoItem";
 import InProgressItemListing from "src/components/listing/InProgressItemListing";
 import Pagination from "src/components/pagination/Pagination";
-import url from "src/config/url";
+import url, { prefix } from "src/config/url";
 import * as estimateActions from "src/store/estimate.store";
 import * as commonUtils from "src/utils/commonUtils";
 import * as stringUtils from "src/utils/stringUtils";
@@ -13,59 +13,85 @@ import * as stringUtils from "src/utils/stringUtils";
 const MyTransactionContainer = () => {
   const { t } = useTranslation();
   const { uid, role } = useSelector(state => state.user);
-  const location = useRouter();
-  const pathName = location.pathname;
-  const searchParamsObject = commonUtils.getSearchPageParams(location.search);
-  const [title, setTitle] = useState(null);
+  const { nextLoading } = useSelector(state => state.common);
+  const router = useRouter();
+  const pathName = router.query.path;
+  let searchParamsObject = commonUtils.getSearchPageParams(router.query);
+  let title = "";
+  let filter = {};
   const { submitQuoteList, submitQuoteListTotalNum } = useSelector(
     state => state.estimate
   );
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    let filter = {};
-    if (url.supplier.myTransaction === pathName) {
-      setTitle("sideMenu.all");
-      filter = {};
-    } else if (url.supplier.inProgress === pathName) {
-      setTitle("sideMenu.inProgress");
-      filter = {
-        status: ["1000"],
-      };
-    } else if (url.supplier.submitted === pathName) {
-      setTitle("sideMenu.submitted");
-      filter = {
-        status: ["2000"],
-      };
-    } else if (url.supplier.ordered === pathName) {
-      setTitle("sideMenu.ordered");
-      filter = {
-        status: ["9000"],
-      };
-    } else if (url.supplier.declined === pathName) {
-      setTitle("sideMenu.declined");
-      filter = {
-        status: ["9100"],
-      };
-    } else if (url.supplier.unSubmitted === pathName) {
-      setTitle("sideMenu.unSubmitted");
-      filter = {
-        status: ["9200"],
-      };
+  const getList = async params => {
+    if (nextLoading) {
+      searchParamsObject = await commonUtils.getSearchPageParams(router.query);
+      const paramsObject = params ? params : searchParamsObject;
+      await dispatch(
+        estimateActions.getQuoteListTrigger({
+          uid,
+          supplierUid: uid,
+          ...paramsObject,
+        })
+      );
     }
-    searchParamsObject.search = JSON.stringify({
-      ...JSON.parse(searchParamsObject.search),
-      ...filter,
-    });
-    dispatch(
-      estimateActions.getQuoteListTrigger({
-        uid,
-        supplierUid: uid,
-        ...searchParamsObject,
-      })
-    );
-  }, [location.search, pathName]);
+  };
+
+  if (
+    url.supplier.myTransaction.replace(prefix.myTransaction, "") ===
+    `/${pathName}`
+  ) {
+    title = "sideMenu.all";
+    filter = {};
+  } else if (
+    url.supplier.inProgress.replace(prefix.myTransaction, "") === `/${pathName}`
+  ) {
+    title = "sideMenu.inProgress";
+    filter = {
+      status: ["1000"],
+    };
+  } else if (
+    url.supplier.submitted.replace(prefix.myTransaction, "") === `/${pathName}`
+  ) {
+    title = "sideMenu.submitted";
+    filter = {
+      status: ["2000"],
+    };
+  } else if (
+    url.supplier.ordered.replace(prefix.myTransaction, "") === `/${pathName}`
+  ) {
+    title = "sideMenu.ordered";
+    filter = {
+      status: ["9000"],
+    };
+  } else if (
+    url.supplier.declined.replace(prefix.myTransaction, "") === `/${pathName}`
+  ) {
+    title = "sideMenu.declined";
+    filter = {
+      status: ["9100"],
+    };
+  } else if (
+    url.supplier.unSubmitted.replace(prefix.myTransaction, "") ===
+    `/${pathName}`
+  ) {
+    title = "sideMenu.unSubmitted";
+    filter = {
+      status: ["9200"],
+    };
+  }
+
+  useEffect(() => {
+    if (nextLoading) {
+      router.query = {
+        ...router.query,
+        ...filter,
+      };
+      getList();
+    }
+  }, [pathName, nextLoading]);
 
   return (
     <>
@@ -87,6 +113,7 @@ const MyTransactionContainer = () => {
                 <Pagination
                   totalCount={submitQuoteListTotalNum}
                   paramsObj={searchParamsObject}
+                  changeEvent={getList}
                 />
               </div>
             </div>

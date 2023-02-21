@@ -1,7 +1,6 @@
 import createSagaMiddleware from "@redux-saga/core";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
-import logger from "redux-logger";
 import { persistReducer } from "redux-persist";
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 import storage from "redux-persist/lib/storage";
@@ -41,21 +40,17 @@ const rootReducer = (state, action) => {
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-const sagaMiddleware = createSagaMiddleware();
-// export const store = configureStore({
-//   reducer: persistedReducer,
-//   devTools: true,
-//   middleware: [logger, sagaMiddleware],
-// });
-
-export const makeStore = () =>
-  configureStore({
+export const makeStore = () => {
+  const sagaMiddleware = createSagaMiddleware();
+  const store = configureStore({
     reducer: persistedReducer,
-    devTools: true,
-    middleware: [logger, sagaMiddleware],
+    devTools: process.env.NODE_ENV === "production" ? false : true,
+    middleware: [sagaMiddleware],
   });
+  sagaMiddleware.run(rootSaga);
+
+  return store;
+};
 
 export const wrapper = createWrapper(makeStore, { debug: true });
 export const store = makeStore();
-
-sagaMiddleware.run(rootSaga);

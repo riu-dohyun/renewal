@@ -15,26 +15,30 @@ const PackagingListContainer = () => {
   const { t } = useTranslation();
   const { uid } = useSelector(state => state.user);
   const router = useRouter();
-  console.log("router >>", router);
-  const searchParamsObject = commonUtils.getSearchPageParams(router.query);
+  let searchParamsObject = commonUtils.getSearchPageParams(router.query);
   const {
     packagingItemsTotalCount,
     packagingItems,
     deleteItem,
     packagingRequestItemsIndex,
   } = useSelector(state => state.packaging);
+  const { nextLoading } = useSelector(state => state.common);
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
-  const getList = () => {
-    dispatch(
-      packagingActions.getPackagingItemListTrigger({
-        uid,
-        buyerUid: uid,
-        ...searchParamsObject,
-      })
-    );
-    window.scrollTo(0, 0);
+  const getList = async params => {
+    if (nextLoading) {
+      searchParamsObject = await commonUtils.getSearchPageParams(router.query);
+      const paramsObject = params ? params : searchParamsObject;
+      await dispatch(
+        packagingActions.getPackagingItemListTrigger({
+          uid,
+          buyerUid: uid,
+          ...paramsObject,
+        })
+      );
+      window.scrollTo(0, 0);
+    }
   };
 
   const formSubmit = e => {
@@ -53,15 +57,17 @@ const PackagingListContainer = () => {
     );
     dispatch(packagingActions.setPackagingRequestSelectedItem(selectedList));
 
-    router(url.buyer.packagingRequest);
+    router.push(url.buyer.packagingRequest);
   };
 
   useEffect(() => {
-    getList();
-  }, [router.search]);
+    if (nextLoading) {
+      getList();
+    }
+  }, [router.query, nextLoading]);
 
   useEffect(() => {
-    if (deleteItem) {
+    if (deleteItem && nextLoading) {
       getList();
     }
   }, [deleteItem]);
@@ -83,7 +89,7 @@ const PackagingListContainer = () => {
               </h2>
             </div>
           </div>
-          <SearchFilter />
+          <SearchFilter changeEvent={getList} />
           {packagingItems && packagingItems.length > 0 && (
             <PackagingItemListing list={packagingItems} />
           )}
@@ -99,6 +105,7 @@ const PackagingListContainer = () => {
                     <Pagination
                       totalCount={packagingItemsTotalCount}
                       paramsObj={searchParamsObject}
+                      changeEvent={getList}
                     />
                   </>
                 )}

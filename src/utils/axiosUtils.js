@@ -1,27 +1,27 @@
 import axios from "axios";
 import * as commonConfig from "src/config/common";
-import { apiAddress } from "src/config/endPoint";
+import { apiAddress, prodApiAddress } from "src/config/endPoint";
 
 // NOTE: 현재 개발 서버에만 api 통신이 가능하기 때문에 동일한 api로 세팅
 
-// const baseURL = commonConfig.developMode ? apiAddress : prodApiAddress;
-// const devParams = commonConfig.developMode
-//   ? {
-//       devKey: "p624c140-306f-11eb-adc1-0242ac120002",
-//       // devId: "dev-do@naver.com",
-//       // devUid: 3,
-//     }
-//   : {};
-
-// NOTE: 현재 개발 서버에만 api 통신이 가능하기 때문에 동일한 api로 세팅
-const baseURL = apiAddress;
+const baseURL = commonConfig.developMode ? apiAddress : prodApiAddress;
 const devParams = commonConfig.developMode
   ? {
       devKey: "p624c140-306f-11eb-adc1-0242ac120002",
       // devId: "dev-do@naver.com",
       // devUid: 3,
     }
-  : { devKey: "p624c140-306f-11eb-adc1-0242ac120002" };
+  : {};
+
+// NOTE: 현재 개발 서버에만 api 통신이 가능하기 때문에 동일한 api로 세팅
+// const baseURL = apiAddress;
+// const devParams = commonConfig.developMode
+//   ? {
+//       devKey: "p624c140-306f-11eb-adc1-0242ac120002",
+//       // devId: "dev-do@naver.com",
+//       // devUid: 3,
+//     }
+//   : { devKey: "p624c140-306f-11eb-adc1-0242ac120002" };
 
 const axiosCreateObj = {
   baseURL: baseURL,

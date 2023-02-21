@@ -16,7 +16,6 @@ const MyAccountContainer = () => {
     state => state.user
   );
 
-  console.log(uid, email, fullName, companyName, country);
   const { myAccountAccessCheck } = useSelector(state => state.noPersistCommon);
 
   useEffect(() => {

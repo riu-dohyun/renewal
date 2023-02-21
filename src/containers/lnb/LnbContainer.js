@@ -14,8 +14,8 @@ import url from "src/config/url";
 import * as commonUtils from "src/utils/commonUtils";
 
 const LnbContainer = () => {
-  const location = useRouter();
-  const pathName = location.pathname;
+  const router = useRouter();
+  const pathName = router.asPath;
   const { role } = useSelector(state => state.user);
   const { windowWidth } = useSelector(state => state.layout);
   const { mobileLnbActive } = useSelector(state => state.layout);
@@ -30,28 +30,45 @@ const LnbContainer = () => {
     pathName === url.buyer.packagingRequest
       ? "active"
       : "";
-  const isInProgressActive =
-    pathName === url.buyer.packagingInProgress ? "active" : "";
+  const isInProgressActive = pathName.includes(url.buyer.packagingInProgress)
+    ? "active"
+    : "";
 
   // NOTE: supplier Opportunities
-  const isNewOpportunitiesActive =
-    pathName === url.supplier.newOpportunities ? "active" : "";
-  const isOpenOpportunitiesActive =
-    pathName === url.supplier.openOpportunities ? "active" : "";
+  const isNewOpportunitiesActive = pathName.includes(
+    url.supplier.newOpportunities
+  )
+    ? "active"
+    : "";
+  const isOpenOpportunitiesActive = pathName.includes(
+    url.supplier.openOpportunities
+  )
+    ? "active"
+    : "";
 
   // NOTE: supplier My transaction
-  const isSupplierMyTransactionActive =
-    pathName === url.supplier.myTransaction ? "active" : "";
-  const isSupplierInProgressActive =
-    pathName === url.supplier.inProgress ? "active" : "";
-  const isSupplierSubmittedActive =
-    pathName === url.supplier.submitted ? "active" : "";
-  const isSupplierOrderedActive =
-    pathName === url.supplier.ordered ? "active" : "";
-  const isSupplierDeclinedActive =
-    pathName === url.supplier.declined ? "active" : "";
-  const isSupplierUnSubmittedActive =
-    pathName === url.supplier.unSubmitted ? "active" : "";
+  const isSupplierMyTransactionActive = pathName.includes(
+    url.supplier.myTransaction
+  )
+    ? "active"
+    : "";
+  const isSupplierInProgressActive = pathName.includes(url.supplier.inProgress)
+    ? "active"
+    : "";
+  const isSupplierSubmittedActive = pathName.includes(url.supplier.submitted)
+    ? "active"
+    : "";
+  const isSupplierOrderedActive = pathName.includes(url.supplier.ordered)
+    ? "active"
+    : "";
+  const isSupplierDeclinedActive = pathName.includes(url.supplier.declined)
+    ? "active"
+    : "";
+  const isSupplierUnSubmittedActive = pathName.includes(
+    url.supplier.unSubmitted
+  )
+    ? "active"
+    : "";
 
   let type = null;
   if (
