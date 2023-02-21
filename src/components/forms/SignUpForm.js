@@ -82,23 +82,30 @@ const SignUpForm = () => {
   };
 
   // NOTE: 이메일 전송 버튼
-  const emailSendBtnClick = async () => {
-    setIsSendCode(false);
-    setTimeout(() => {
-      if (regexpUtils.regexpEmailTest(email)) {
-        dispatch(userAction.setEmailTimeOverInit());
-        setIsSendCode(true);
-        dispatch(userAction.verifyCodeSend({ email, uid: uid }));
-        setErrors({ ...errors, email: false });
-      } else {
-        toastUtils.errorToast(
-          `${stringUtils.firstCharToUpperCase(t("signUp.toast.errorToast1"))}`
-        );
-        setIsSendCode(false);
-        setErrors({ ...errors, email: true });
-      }
-      setVerifyCode("");
-    }, 0);
+  const emailSendBtnClick = () => {
+    if (regexpUtils.regexpRejectPortalEmailTest(email)) {
+      toastUtils.errorToast(
+        `${stringUtils.firstCharToUpperCase(t("signUp.toast.errorToast9"))}`
+      );
+      setIsSendCode(false);
+    } else {
+      setIsSendCode(false);
+      setTimeout(() => {
+        if (regexpUtils.regexpEmailTest(email)) {
+          dispatch(userAction.setEmailTimeOverInit());
+          setIsSendCode(true);
+          dispatch(userAction.verifyCodeSend({ email, uid: uid }));
+          setErrors({ ...errors, email: false });
+        } else {
+          toastUtils.errorToast(
+            `${stringUtils.firstCharToUpperCase(t("signUp.toast.errorToast1"))}`
+          );
+          setIsSendCode(false);
+          setErrors({ ...errors, email: true });
+        }
+        setVerifyCode("");
+      }, 0);
+    }
   };
 
   // NOTE: 이메일로 전송된 code 확인 버튼
@@ -137,6 +144,13 @@ const SignUpForm = () => {
       role: userRole.trim(),
       verifyCode: verifyCode.trim(),
     };
+
+    if (regexpUtils.regexpRejectPortalEmailTest(value.email)) {
+      toastUtils.errorToast(
+        `${stringUtils.firstCharToUpperCase(t("signUp.toast.errorToast9"))}`
+      );
+      return false;
+    }
 
     if (!regexpUtils.regexpEmailTest(value.email)) {
       toastUtils.errorToast(

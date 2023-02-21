@@ -441,6 +441,7 @@
       "errorToast6": "full name check please",
       "errorToast7": "country check please",
       "errorToast8": "company name check please",
+      "errorToast9": "Portal email not available.",
       "warningToast1": "please send the email again to proceed.",
       "successToast1": "mail verify code success"
     }

@@ -49,6 +49,12 @@ const EmailVerifyForm = props => {
 
   // NOTE: 이메일 전송 버튼
   const emailSendBtnClick = async () => {
+    if (regexpUtils.regexpRejectPortalEmailTest(email)) {
+      toastUtils.errorToast(
+        `${stringUtils.firstCharToUpperCase(t("signUp.toast.errorToast9"))}`
+      );
+      return false;
+    }
     if (!emailSameCheck()) {
       return false;
     }
