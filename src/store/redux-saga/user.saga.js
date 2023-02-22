@@ -1,3 +1,4 @@
+import url from "@/config/url";
 import { getFixedT } from "i18next";
 import { call, put, takeLatest } from "redux-saga/effects";
 import * as commonConfig from "src/config/common";
@@ -66,6 +67,8 @@ function* logoutSaga(action) {
         yield put({
           type: userActions.logoutSuccess,
         });
+        yield console.log("action.payload.router >>>>", action.payload.router);
+        yield action.payload.router.push(url.home);
       } else {
         yield put({
           type: userActions.logoutFailure,

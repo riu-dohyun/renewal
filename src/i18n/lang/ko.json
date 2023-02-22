@@ -470,6 +470,7 @@
       "errorToast6": "한국어 full name check please",
       "errorToast7": "한국어 country check please",
       "errorToast8": "한국어 company name check please",
+      "errorToast9": "?? Portal email not available.",
       "warningToast1": "한국어 Please send the email again to proceed.",
       "successToast1": "한국어 mail verify code success"
     }

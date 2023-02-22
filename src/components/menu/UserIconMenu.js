@@ -10,7 +10,7 @@ import * as stringUtils from "src/utils/stringUtils";
 const UserIconMenu = () => {
   const { uid } = useSelector(state => state.user);
   const { t } = useTranslation();
-  const navigate = useRouter();
+  const router = useRouter();
   const dispatch = useDispatch();
   const [active, setActive] = useState(false);
   const userIconClickEvent = () => {
@@ -22,9 +22,9 @@ const UserIconMenu = () => {
     e.preventDefault();
     if (uid === -1 || uid === "-1" || !uid) {
       localStorage.removeItem("persist:root");
-      navigate(url.home);
+      router(url.home);
     } else {
-      dispatch(userActions.logout({ uid }));
+      dispatch(userActions.logout({ uid, router }));
     }
   };
 
