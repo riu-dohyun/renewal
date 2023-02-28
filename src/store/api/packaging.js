@@ -67,7 +67,7 @@ export const createItemApi = async props => {
     buyerUid,
     category,
     subCategory,
-    style,
+    style: style ? style : "",
     itemName,
     notes,
     contents,

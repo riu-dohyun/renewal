@@ -153,6 +153,7 @@ export function* watchAwsFileDownloadLink() {
 // NOTE: ITEM CREATE START
 function* itemCreateSaga(action) {
   const i18nMiddleKey = "itemCreate";
+  console.log("action.payload >>", action.payload);
   yield commonUtils.commonSagaWrapper({
     tryFunc: function* () {
       const createItemInfo = yield call(packagingApi.createItemApi, {
@@ -206,6 +207,8 @@ export function* getPackagingItemListSaga(action) {
       const { resData, retCode } = yield commonUtils.getResponseData(
         getPackagingItemListInfo
       );
+
+      console.log("resData", resData);
 
       if (retCode === 0) {
         yield put({

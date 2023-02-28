@@ -5,9 +5,9 @@ import { put } from "redux-saga/effects";
 import * as categoryConfig from "src/config/category";
 import * as commonConfig from "src/config/common";
 import { typeOnCheckBox, typeOnInput } from "src/config/specification";
-import url from "src/config/url";
 import i18n from "src/i18n/i18n";
 import * as commonAction from "src/store/common.store";
+import * as userActions from "src/store/user.store";
 import * as commonUtils from "src/utils/commonUtils";
 import * as toastUtils from "src/utils/toastUtils";
 import { v4 as uuidV4 } from "uuid";
@@ -71,12 +71,18 @@ export function* commonSagaWrapper(props) {
         type: commonAction.start,
       });
     }
-    const { i18nMiddleKey, retCode, navigate } = yield tryFunc();
+    const { i18nMiddleKey, retCode } = yield tryFunc();
     // console.log("i18nMiddleKey >>", i18nMiddleKey);
     if (retCode !== undefined) {
       if (retCode === 9) {
-        yield localStorage.removeItem("persist:root");
-        yield navigate?.push(url.home);
+        yield put({
+          type: userActions.logoutSuccess,
+        });
+        if (window !== "undefined") {
+          yield window.location.replace("/");
+        }
+        // yield localStorage.removeItem("persist:root");
+        // yield navigate?.push(url.home);
         return false;
       }
 

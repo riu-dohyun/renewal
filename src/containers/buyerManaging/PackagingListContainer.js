@@ -7,6 +7,7 @@ import PackagingItemListing from "src/components/listing/PackagingItemListing";
 import Pagination from "src/components/pagination/Pagination";
 import SearchFilter from "src/components/search/SearchFilter";
 import url from "src/config/url";
+import * as commonActions from "src/store/common.store";
 import * as packagingActions from "src/store/packaging.store";
 import * as commonUtils from "src/utils/commonUtils";
 import * as stringUtils from "src/utils/stringUtils";
@@ -27,7 +28,9 @@ const PackagingListContainer = () => {
   const dispatch = useDispatch();
 
   const getList = async params => {
+    console.log("nextLoading >>", nextLoading);
     if (nextLoading) {
+      console.log("여기 오니 ?");
       searchParamsObject = await commonUtils.getSearchPageParams(router.query);
       const paramsObject = params ? params : searchParamsObject;
       await dispatch(
@@ -61,8 +64,11 @@ const PackagingListContainer = () => {
   };
 
   useEffect(() => {
+    console.log("nextLoading >>", nextLoading);
     if (nextLoading) {
       getList();
+    } else {
+      dispatch(commonActions.setNextLoading(true));
     }
   }, [router.query, nextLoading]);
 
@@ -77,6 +83,8 @@ const PackagingListContainer = () => {
       setLoading(false);
     }
   }, [loading]);
+
+  console.log("packagingItems >>", packagingItems);
 
   return (
     <>

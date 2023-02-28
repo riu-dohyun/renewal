@@ -75,7 +75,7 @@ const PasswordResetForm = () => {
       })
     );
 
-    await navigate(url.auth.signIn, { replace: true });
+    await navigate.push(url.auth.signIn);
   };
 
   // NOTE: 비밀번호 정규식이 맞는지 체크

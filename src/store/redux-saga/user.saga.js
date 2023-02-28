@@ -67,13 +67,21 @@ function* logoutSaga(action) {
         yield put({
           type: userActions.logoutSuccess,
         });
-        yield console.log("action.payload.router >>>>", action.payload.router);
-        yield action.payload.router.push(url.home);
+        // yield console.log("action.payload.router >>>>", action.payload.router);
+        // yield localStorage.removeItem("persist:root");
+        // yield action.payload.router.push(url.home);
       } else {
         yield put({
           type: userActions.logoutFailure,
         });
       }
+
+      yield put({
+        type: userActions.logoutSuccess,
+      });
+
+      // yield localStorage.removeItem("persist:root");
+      yield action.payload.router.push(url.home);
 
       return { retCode, i18nMiddleKey };
     },
@@ -197,7 +205,7 @@ function* getMyInfoSaga(action) {
         });
       }
 
-      return { retCode, i18nMiddleKey, navigate: action.navigate };
+      return { retCode, i18nMiddleKey, navigate: action?.navigate };
     },
     errorMessage: "server error",
     notLoading: true,

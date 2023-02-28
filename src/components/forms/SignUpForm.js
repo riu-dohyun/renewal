@@ -235,7 +235,7 @@ const SignUpForm = () => {
   // NOTE: sign up 성공시
   useEffect(() => {
     if (signUpUserLogin) {
-      navigate(url.auth.signIn, { replace: true });
+      router.push(url.auth.signIn);
     }
   }, [signUpUserLogin]);
 
